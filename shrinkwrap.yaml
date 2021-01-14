@@ -1,7 +1,9 @@
 dependencies:
+  chalk: 4.1.0
   discord.js: 12.5.1
   express: 4.17.1
   fs: 0.0.2
+  moment: 2.29.1
 packages:
   /@discordjs/collection/0.1.6:
     dev: false
@@ -34,6 +36,14 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-Il80Qs2WjYlJIBNzNkK6KYqlVMTbZLXgHx2oT0pU/fjRHyEp+PEfEPY0R3WCwAGVOtauxh1hOxNgIf5bv7dQpA==
+  /ansi-styles/4.3.0:
+    dependencies:
+      color-convert: 2.0.1
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==
   /array-flatten/1.1.1:
     dev: false
     resolution:
@@ -65,6 +75,27 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-zauLjrfCG+xvoyaqLoV8bLVXXNGC4JqlxFCutSDWA6fJrTo2ZuvLYTqZ7aHBLZSMOopbzwv8f+wZcVzfVTI2Dg==
+  /chalk/4.1.0:
+    dependencies:
+      ansi-styles: 4.3.0
+      supports-color: 7.2.0
+    dev: false
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A==
+  /color-convert/2.0.1:
+    dependencies:
+      color-name: 1.1.4
+    dev: false
+    engines:
+      node: '>=7.0.0'
+    resolution:
+      integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==
+  /color-name/1.1.4:
+    dev: false
+    resolution:
+      integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
   /combined-stream/1.0.8:
     dependencies:
       delayed-stream: 1.0.0
@@ -227,6 +258,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-4fJE7zkzwbKmS9R5kTYGDQ9ZFPg=
+  /has-flag/4.0.0:
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==
   /http-errors/1.7.2:
     dependencies:
       depd: 1.1.2
@@ -324,6 +361,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
+  /moment/2.29.1:
+    dev: false
+    resolution:
+      integrity: sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
   /ms/2.0.0:
     dev: false
     resolution:
@@ -456,6 +497,14 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
+  /supports-color/7.2.0:
+    dependencies:
+      has-flag: 4.0.0
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==
   /toidentifier/1.0.0:
     dev: false
     engines:
@@ -506,6 +555,8 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
+  chalk: ^4.1.0
   discord.js: ^12.5.1
   express: ^4.17.1
   fs: ^0.0.2
+  moment: ^2.29.1
