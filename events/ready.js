@@ -6,8 +6,8 @@ const { prefix } = require('../ayarlar.json')
 module.exports = client => {
   var degisenOynuyor = [
     
-    "Youtube/NoblesYT",
-    "v12 Boş Altyapı"
+    "YOUTUBE MATTHE",
+    "YOUTUBE MATTHE"
     
   ]
   
