@@ -120,7 +120,7 @@ client.login(ayarlar.token);
 
 client.on("userUpdate", async function(oldUser, newUser) { // Youtube Matthe
     const guildID = (ayarlar.sunucuid)//sunucu
-    const roleID = (ayarlar.taglırol)//taglırolü
+    const roleID = (ayarlar.taglırolü)//taglırolü
     const tag = (ayarlar.tag) //taglı rolü
     const chat = (ayarlar.chat)// chat kanalı 
     const taglog = (ayarlar.taglog) // log kanalı
