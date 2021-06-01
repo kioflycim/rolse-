@@ -140,10 +140,10 @@ client.on("userUpdate", async function(oldUser, newUser) { // Youtube Matthe
         }
     }
    if (newUser.discriminator !== oldUser.discriminator) {
-        if (oldUser.discriminator == (ayarlar.etiket) && newUser.discriminator !== (ayarlar.etiket)) {
+        if (oldUser.discriminator == (ayarlar.etikettagı) && newUser.discriminator !== (ayarlar.etikettagı)) {
             member.roles.remove(roleID)
             client.channels.cache.get(taglog).send(embed.setDescription(`${newUser} etiket tagımızı çıkartarak ailemizden ayrıldı!`))
-        } else if (oldUser.discriminator !== (ayarlar.etiket) && newUser.discriminator == (ayarlar.etiket)) {
+        } else if (oldUser.discriminator !== (ayarlar.etikettagı) && newUser.discriminator == (ayarlar.etikettagı)) {
             member.roles.add(roleID)
             client.channels.cache.get(taglog).send(embed.setDescription(`${newUser} etiket tagımızı alarak ailemize katıldı!`))
             client.channels.cache.get(chat).send(`${ayarlar.onayemoji} **Tebrikler, ${newUser} etiket tagımızı alarak ailemize katıldı!**`)
