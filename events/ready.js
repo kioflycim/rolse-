@@ -9,7 +9,7 @@ module.exports = client => {
   console.log(`(${client.user.username}) Bot Hazır`);
   client.user.setStatus("dnd");
   client.user.setPresence({ activity: { name: (ayarlar.botdurum) }, status: "dnd" });
-  client.channels.cache.get((ayarlar.seskanalı)).join() // ses kanalı İD
+  client.channels.cache.get((ayarlar.seskanalı)).join() 
     console.log(`Bot Aktif`);
 
 };

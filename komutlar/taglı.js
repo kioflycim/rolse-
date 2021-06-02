@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
    const embed1 = new Discord.MessageEmbed()
     .addField(
       (ayarlar.sunucuadı),
-      `${ayarlar.yildizemoji} **Rol verilen üye =>** ${member.user} \n **Rol veren yetkili =>** ${message.author} \n **Verilen rol =>** <@&${ayarlar.taglırolü}> `
+      `${ayarlar.onayemoji} **Rol verilen üye =>** ${member.user} \n **Rol veren yetkili =>** ${message.author} \n **Verilen rol =>** <@&${ayarlar.taglırolü}> `
     )
     .setColor("BLACK")
     .setFooter(message.author.tag, message.author.avatarURL)
@@ -28,7 +28,7 @@ exports.run = async (client, message, args) => {
     .setColor("BLACK")
     .addField(
       (ayarlar.sunucuadı),
-      `${ayarlar.yildizemoji} ${member.user} **kullanıcısına başarıyla <@&${ayarlar.taglırolü}> rolü verildi!**`
+      `${ayarlar.onayemoji} ${member.user} **kullanıcısına başarıyla <@&${ayarlar.taglırolü}> rolü verildi!**`
     )
     .setFooter(message.author.tag, message.author.avatarURL)
     .setTimestamp();
