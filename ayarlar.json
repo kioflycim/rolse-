@@ -1,20 +1,21 @@
 {
-  "token": "ODIxNzg1MTk5OTg4OTY1Mzg2.YFIxGw.AjPibxFdRBrJQYy1-tHpjK26goo",
-  "prefix": "!",
-  "sahip": "796263552771817472",
+  "token": "ODIxNzg1MTk5OTg4OTY1Mzg2.YFIxGw.urv53cQz32e2y6rQ0ZNUIpUlaVs",
+  "prefix": "PREFIX",
+  "sahip": "SAHIP ID",
   
-  "sunucuadı": "Matthe Video",
-  "sunucuid": "847733452643368990",
-  "seskanalı": "847743318111944784",
-  "botdurum": "Matthe Video",
-  "footer": "Coder by Matthe",
+  "sunucuadı": "SUNUCU ISMINIZ",
+  "sunucuid": "SUNUCU ID'Sİ",
+  "seskanalı": "SES KANALI ID",
+  "botdurum": "YOUTUBE MATTHE",
+  "footer": "YOUTUBE MATTHE",
   
-  "tag": "q",
-  "etikettag": "1111",
-  "chat": "849333671374880778",
-  "taglırolü": "847741789019963394",
-  "taglog": "849333620123369473",
   
-  "onayemoji": "<a:matthe_onay:847743658614194188>",
-  "redemoji": "<a:matthe_red:847743681322418187>"
+  "tag": "TAGINIZ",
+  "etikettagı": "ETİKET TAGINIZ ÖRNEK #1111 YOKSA BOŞ BIRAK!",
+  "chat": "CHAT KANALI ID",
+  "taglırolü": "TAGLI ROLU ID",
+  "taglog": "TAG LOG ID",
+  
+  "onayemoji": "ONAY EMOJİ",
+  "redemoji": "RED EMOJİ"
 }
