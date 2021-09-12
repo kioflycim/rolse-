@@ -1,21 +1,11 @@
 {
-  "token": "TOKENİNİZİ GİZLEMENİZİ ÖNERİRİRİZ YOKSA SUNUCUNUZ PATLAR!",
-  "prefix": "PREFIX",
-  "sahip": "SAHIP ID",
+  "prefix": "!",
+  "sahip": "796263552771817472",
+  "BotStatus": "BOTUNUZUN STATÜSÜ YANİ - dnd, online vs. vs.",
   
-  "sunucuadı": "SUNUCU ISMINIZ",
-  "sunucuid": "SUNUCU ID'Sİ",
-  "seskanalı": "SES KANALI ID",
+  "EtkinlikKatılımcısı": "882964627556794400",
+  "ÇekilişKatılımcısı": "882964627556794401",
+  
   "botdurum": "YOUTUBE MATTHE",
-  "footer": "YOUTUBE MATTHE",
-  
-  
-  "tag": "TAGINIZ",
-  "etikettagı": "ETİKET TAGINIZ ÖRNEK #1111 YOKSA BOŞ BIRAK!",
-  "chat": "CHAT KANALI ID",
-  "taglırolü": "TAGLI ROLU ID",
-  "taglog": "TAG LOG ID",
-  
-  "onayemoji": "ONAY EMOJİ",
-  "redemoji": "RED EMOJİ"
+  "footer": "YOUTUBE MATTHE"
 }

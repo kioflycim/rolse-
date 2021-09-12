@@ -6,6 +6,9 @@ const fs = require("fs");
 const moment = require("moment");
 const Jimp = require("jimp");
 const db = require("quick.db");
+const matthe = require('discord-buttons')
+matthe(client)
+
 var prefix = ayarlar.prefix;
 
 client.on("ready", () => {
@@ -16,13 +19,7 @@ const log = message => {
   console.log(`[${moment().format("YYYY-MM-DD HH:mm:ss")}] ${message}`);
 };
 
-///////////// KOMUTLAR BAŞ
-
-////////////// KOMUTLAR SON
-////////////// ALTI ELLEME
 require("./util/eventLoader")(client);
-
-client.login(ayarlar.token);
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
@@ -102,9 +99,6 @@ client.elevation = message => {
 };
 
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
-// client.on('debug', e => {
-//   console.log(chalk.bgBlue.green(e.replace(regToken, 'that was redacted')));
-// });
 
 client.on("warn", e => {
   console.log(chalk.bgYellow(e.replace(regToken, "that was redacted")));
@@ -114,41 +108,61 @@ client.on("error", e => {
   console.log(chalk.bgRed(e.replace(regToken, "that was redacted")));
 });
 
-client.login(ayarlar.token);
 
- //------------------------------------------ TAG ROL KISMI MATTHE YOUTUNBE -----------------------------------------------------------\\
+client.on("message", (message) => {
 
-client.on("userUpdate", async function(oldUser, newUser) { // Youtube Matthe
-    const guildID = (ayarlar.sunucuid)//sunucu
-    const roleID = (ayarlar.taglırolü)//taglırolü
-    const tag = (ayarlar.tag) //taglı rolü
-    const chat = (ayarlar.chat)// chat kanalı 
-    const taglog = (ayarlar.taglog) // log kanalı
+  if (message.content !== "!button" || message.author.id === (ayarlar.sahip) || message.author.bot) return;
   
-    const guild = client.guilds.cache.get(guildID)
-    const role = guild.roles.cache.find(roleInfo => roleInfo.id === roleID)
-    const member = guild.members.cache.get(newUser.id)
-    const embed = new Discord.MessageEmbed().setAuthor(member.displayName, member.user.avatarURL({ dynamic: true })).setColor('#e4b400').setTimestamp().setFooter(ayarlar.footer);
-    if (newUser.username !== oldUser.username) {
-        if (oldUser.username.includes(tag) && !newUser.username.includes(tag)) {
-            member.roles.remove(roleID)
-            client.channels.cache.get(taglog).send(embed.setDescription(`${newUser} isminden tagımızı çıkartarak ailemizden ayrıldı!`))
-        } else if (!oldUser.username.includes(tag) && newUser.username.includes(tag)) {
-            member.roles.add(roleID)
-            client.channels.cache.get(chat).send(`${ayarlar.onayemoji} **Tebrikler, ${newUser} tag alarak ailemize katıldı!**`)
-            client.channels.cache.get(taglog).send(embed.setDescription(`${newUser} ismine tagımızı alarak ailemize katıldı!`))
+  let EtkinlikKatılımcısı = new matthe.MessageButton()
+    .setStyle('red') 
+    .setLabel('Etkinlik Katılımcısı') 
+    .setID('EtkinlikKatılımcısı'); 
+
+  let ÇekilişKatılımcısı = new matthe.MessageButton()
+    .setStyle('green') 
+    .setLabel('Çekiliş Katılımcısı') 
+    .setID('ÇekilişKatılımcısı');
+  
+  message.channel.send(`
+Merhaba!
+ 
+Çekiliş Katılımcısı alarak **nitro, spotify, netflix ve benzeri çekilişlere katılıp ödül sahibi** olabilirsiniz.
+
+Aşağıda bulunan butonlardan **Etkinlik Katılımcısı alarak konserlerimizden, oyunlarımızdan, ve etkinliklerimizden** faydalanabilirsiniz.
+
+\`NOT:\` Kayıtlı , kayıtsız olarak hepiniz bu kanalı görebilmektesiniz. Bu sunucumuzda everyone here atılmayacağından dolayı kesinlikle rollerinizi almayı unutmayın.
+`, { 
+    buttons: [ EtkinlikKatılımcısı, ÇekilişKatılımcısı]
+});
+});
+  
+client.on('clickButton', async (button) => {
+
+    if (button.id === 'EtkinlikKatılımcısı') {
+        if (button.clicker.member.roles.cache.get((ayarlar.EtkinlikKatılımcısı))) {
+            await button.clicker.member.roles.remove((ayarlar.EtkinlikKatılımcısı))
+            await button.reply.think(true);
+            await button.reply.edit("Etkinlik Katılımcısı rolü başarıyla üzerinizden alındı!")
+        } else {
+            await button.clicker.member.roles.add(((ayarlar.EtkinlikKatılımcısı)))
+            await button.reply.think(true);
+            await button.reply.edit("Etkinlik Katılımcısı rolünü başarıyla aldınız!")
         }
     }
-   if (newUser.discriminator !== oldUser.discriminator) {
-        if (oldUser.discriminator == (ayarlar.etikettagı) && newUser.discriminator !== (ayarlar.etikettagı)) {
-            member.roles.remove(roleID)
-            client.channels.cache.get(taglog).send(embed.setDescription(`${newUser} etiket tagımızı çıkartarak ailemizden ayrıldı!`))
-        } else if (oldUser.discriminator !== (ayarlar.etikettagı) && newUser.discriminator == (ayarlar.etikettagı)) {
-            member.roles.add(roleID)
-            client.channels.cache.get(taglog).send(embed.setDescription(`${newUser} etiket tagımızı alarak ailemize katıldı!`))
-            client.channels.cache.get(chat).send(`${ayarlar.onayemoji} **Tebrikler, ${newUser} etiket tagımızı alarak ailemize katıldı!**`)
+
+
+    if (button.id === 'Çekiliş Katılımcısı') {
+        if (button.clicker.member.roles.cache.get((ayarlar.ÇekilişKatılımcısı))) {
+            await button.clicker.member.roles.remove((ayarlar.ÇekilişKatılımcısı))
+            await button.reply.think(true);
+            await button.reply.edit(`Çekiliş Katılımcısı rolü başarıyla üzerinizden alındı!`)
+        } else {
+            await button.clicker.member.roles.add((ayarlar.ÇekilişKatılımcısı))
+            await button.reply.think(true);
+            await button.reply.edit(`Çekiliş Katılımcısı rolünü başarıyla aldınız!`)
         }
+
     }
-  
-  })
-    //------------------------------------------ TAG ROL KISMI MATTHE YOUTUNBE -----------------------------------------------------------\\
+});
+
+client.login(process.env.token);
