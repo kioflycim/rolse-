@@ -113,75 +113,56 @@ client.on("error", e => {
 
 client.on("message", (message) => {
 
-  if (message.content !== "!button" || message.author.id === "796263552771817472" || message.author.bot) return;
+  if (message.content !== "!button" || message.author.bot) return;
   
-  let Vk = new matthe.MessageButton()
-    .setStyle('red') // Rengi ayarlayabilirsiniz.
-    .setLabel('Normal Codes') // Adını Değiştirebilirsiniz.
-    .setID('V/K'); // Elleme Bunu
+  let EtkinlikKatılımcısı = new matthe.MessageButton()
+    .setStyle('red') 
+    .setLabel('Etkinlik Katılımcısı') 
+    .setID('EtkinlikKatılımcısı'); 
 
-  let Dc = new matthe.MessageButton()
-    .setStyle('green') // Rengi ayarlayabilirsiniz.
-    .setLabel('Club Announcement') // Adını Değiştirebilirsiniz.
-    .setID('D/C'); // Elleme Bunu
-  
-  let Gartic = new matthe.MessageButton()
-    .setStyle("blurple") // Rengi ayarlayabilirsiniz.
-    .setLabel('Discord Updates') // Adını Değiştirebilirsiniz.
-    .setID('Gartic'); // Elleme Bunu
+  let ÇekilişKatılımcısı = new matthe.MessageButton()
+    .setStyle('green') 
+    .setLabel('Çekiliş Katılımcısı') 
+    .setID('ÇekilişKatılımcısı');
   
   message.channel.send(`
-  <:tac:830580890097680464> **Selam, Sunucumuzdaki "Kod & Duyuru" Rollerini Almak İçin Butonlara Tıklamanız Yeterlidir.**
-  **__ROLLER__**;
-  \`>\`  **Sahip olmak için butona tıkla.**
-  \`>\` <@&868629974008074250> **Sahip olmak için 3 davet yapmalısın.**
-  \`>\` <@&868630077540282409> **Sahip olmak için 5 davet yapmalısın.**
-  \`>\` <@&868630730786373702> **Sahip olmak için 7 davet yapmalısın.**
-  \`>\` <@&868645220944863283> **Sahip olmak için 10 davet yapmalısın.**
-  \`>\`  **Sahip olmak için butona tıkla.**
-  \`>\`  **Sahip olmak için butona tıkla.**
-  `, { 
-    buttons: [ Vk, Dc, Gartic]
+Merhaba!
+ 
+Çekiliş Katılımcısı alarak **nitro, spotify, netflix ve benzeri çekilişlere katılıp ödül sahibi** olabilirsiniz.
+
+Aşağıda bulunan butonlardan **Etkinlik Katılımcısı alarak konserlerimizden, oyunlarımızdan, ve etkinliklerimizden** faydalanabilirsiniz.
+
+\`NOT:\` Kayıtlı , kayıtsız olarak hepiniz bu kanalı görebilmektesiniz. Bu sunucumuzda everyone here atılmayacağından dolayı kesinlikle rollerinizi almayı unutmayın.
+`, { 
+    buttons: [ EtkinlikKatılımcısı, ÇekilişKatılımcısı]
 });
 });
   
 client.on('clickButton', async (button) => {
-  // V/K
-    if (button.id === 'V/K') {
-        if (button.clicker.member.roles.cache.get("882964627716210730")) {
-            await button.clicker.member.roles.remove("882964627716210730")
+
+    if (button.id === 'EtkinlikKatılımcısı') {
+        if (button.clicker.member.roles.cache.get((ayarlar.EtkinlikKatılımcısı))) {
+            await button.clicker.member.roles.remove((ayarlar.EtkinlikKatılımcısı))
             await button.reply.think(true);
-            await button.reply.edit("Normal Codes Rolü Üzerinizden Alındı!")
+            await button.reply.edit("Etkinlik Katılımcısı rolü başarıyla üzerinizden alındı!")
         } else {
-            await button.clicker.member.roles.add("882964627716210730")
+            await button.clicker.member.roles.add(((ayarlar.EtkinlikKatılımcısı)))
             await button.reply.think(true);
-            await button.reply.edit("Normal Codes Üzerinize Verildi!")
+            await button.reply.edit("Etkinlik Katılımcısı rolünü başarıyla aldınız!")
         }
     }
 
-  // D/C
-    if (button.id === 'D/C') {
-        if (button.clicker.member.roles.cache.get("882964627716210730")) {
-            await button.clicker.member.roles.remove("882964627716210730")
+
+    if (button.id === 'ÇekilişKatılımcısı') {
+        if (button.clicker.member.roles.cache.get((ayarlar.ÇekilişKatılımcısı))) {
+            await button.clicker.member.roles.remove((ayarlar.ÇekilişKatılımcısı))
             await button.reply.think(true);
-            await button.reply.edit(`Club Announcement Üzerinizden Alındı!`)
+            await button.reply.edit(`Çekiliş Katılımcısı rolü başarıyla üzerinizden alındı!`)
         } else {
-            await button.clicker.member.roles.add("")
+            await button.clicker.member.roles.add((ayarlar.ÇekilişKatılımcısı))
             await button.reply.think(true);
-            await button.reply.edit(`Club Announcement Rolü Üzerinize Verildi!`)
+            await button.reply.edit(`Çekiliş Katılımcısı rolünü başarıyla aldınız!`)
         }
 
     }
-  // GARTIC
-    if (button.id === 'Gartic') {
-        if (button.clicker.member.roles.cache.get("cfg.roles.gartic")) {
-            await button.clicker.member.roles.remove("cfg.roles.gartic")
-            await button.reply.think(true)
-            await button.reply.edit(`Discord Updates Rolü Üzerinizden Alındı!`)
-        } else {
-            await button.clicker.member.roles.add("cfg.roles.gartic")
-            await button.reply.think(true);
-            await button.reply.edit("Discord Updates Rolü Üzerinize Verildi!")
-        }
-    }
-});
+  });
