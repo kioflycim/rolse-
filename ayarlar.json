@@ -1,11 +1,11 @@
 {
   "prefix": "!",
-  "sahip": "796263552771817472",
+  "sahip": "BOT SAHİP ID",
   "BotStatus": "dnd",
-  "SesKanalı": "882964628559233029",
+  "SesKanalı": "BOT SES KANALI ID",
   
-  "EtkinlikKatılımcısı": "886962115041165372",
-  "ÇekilişKatılımcısı": "886962108066050048",
+  "EtkinlikKatılımcısı": "ETKİNLİK KATILIMCISI ROLÜ ID",
+  "ÇekilişKatılımcısı": "ÇEKİLİŞ KATILIMCISI ROLÜ ID",
   
   "botdurum": "YOUTUBE MATTHE",
   "footer": "YOUTUBE MATTHE"
