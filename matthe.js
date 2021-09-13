@@ -113,7 +113,7 @@ client.on("error", e => {
 
 client.on("message", (message) => {
 
-  if (message.content !== "!buton" || message.author.bot) return;
+    if (message.content !== "!buton" || message.author.id === ayarlar.sahip || message.author.bot) return;
   
   let EtkinlikKatılımcısı = new matthe.MessageButton()
     .setStyle('red') 

@@ -86,7 +86,7 @@ pingmesaj = ":white_circle: "
 pingdurum = "#66ff00"
 }
 const embed = new Discord.MessageEmbed()
-.setAuthor(message.author.username + " Adlı kullanıcı tarafından istenildi.",message.author.avatarURL)
+.setAuthor(message.author.username + " kullanıcısı tarafından istenildi!",message.author.avatarURL)
 .setDescription(`Gecikme: ${client.ws.ping+ "ms"} ${pingmesaj}\n\nMesaj Gecikmesi: ${(Date.now() - message.createdAt)+ "ms"} ${mesaj}`)
 .setColor(pingdurum)
 .setFooter(client.user.username, client.user.avatarURL)
