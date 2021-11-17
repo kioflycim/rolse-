@@ -1,12 +1,12 @@
 {
-  "prefix": "!",
-  "sahip": "BOT SAHİP ID",
+  "prefix": "+",
+  "sahip": "791322084164763679",
   "BotStatus": "dnd",
-  "SesKanalı": "BOT SES KANALI ID",
+  "SesKanalı": "",
   
-  "EtkinlikKatılımcısı": "ETKİNLİK KATILIMCISI ROLÜ ID",
-  "ÇekilişKatılımcısı": "ÇEKİLİŞ KATILIMCISI ROLÜ ID",
+  "EtkinlikKatılımcısı": "907266518000205884",
+  "ÇekilişKatılımcısı": "907266398248665129",
   
-  "botdurum": "YOUTUBE MATTHE",
-  "footer": "YOUTUBE MATTHE"
+  "botdurum": "Aphesus ♥ Loulzy",
+  "footer": "Aphesus "
 }
