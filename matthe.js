@@ -661,7 +661,7 @@ menu.clicker.member.roles.remove("884123896016695297")
     }
 });
 client.on("message", async message => {
-    if(message.content.startsWith(".sdpc")) {
+    if(message.content.startsWith(".pc")) {
         if(message.author.bot) return;
         let secenek1 = new MessageMenuOption()
         .setLabel("Çekiliş Katılımcısı")
@@ -675,7 +675,7 @@ client.on("message", async message => {
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
         .setEmoji("<:emoji_85:915269762718777424>")
-        MessageMenuOption()
+        let secenek3 = new MessageMenuOption()
         .setLabel("temizle")
         .setValue("temizle")
         .setDescription("Rolü almak için tıkla!")
@@ -688,10 +688,31 @@ client.on("message", async message => {
         .setPlaceholder("Çekiliş katılımcısı ve Partner Görme rollerini alabilirsiniz!")
         .addOption(secenek1)
         .addOption(secenek2)
-        message.channel.send("Çekiliş katılımcısı ve Partner Görme rollerini alabilirsiniz!", menu)
+        .addOption(secenek3)
+      let menumesaj = await message.channel.send("Çekiliş katılımcısı ve Partner Görme rollerini alabilirsiniz!", menu)
         function menuselection(menu) {
             switch(menu.values[0]) {
                 case "partner":
-                    menu.reply.send("<@&884123855164166245> Rolü verildi", true)
-                    menu.clicker.member.roles.add("810934535435976754")
-                    menu.clicker.member.roles.remove("810842301919920181")
+                    menu.reply.send("<@&884123904262680686> Rolü verildi", true)
+                    menu.clicker.member.roles.add("884123904262680686")
+                    menu.clicker.member.roles.remove("915268334625370143")
+                break;
+                case "çekiliş":
+                    menu.reply.send("<@&915268334625370143> Rolü verildi", true)
+                    menu.clicker.member.roles.add("915268334625370143") 
+                    menu.clicker.member.roles.remove("884123904262680686")
+                break;
+                case "temizle":
+                  menu.reply.send("Roller alındı", true)
+                  menu.clicker.member.roles.remove("915268334625370143")
+                  menu.clicker.member.roles.remove("884123904262680686")
+                break;  
+            }
+        }
+        client.on("clickMenu", menu => {
+            if(menu.message.id == menumesaj.id) {
+                    menuselection(menu)
+            }
+        })
+    }
+});
