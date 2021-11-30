@@ -110,85 +110,59 @@ client.on("error", e => {
   console.log(chalk.bgRed(e.replace(regToken, "that was redacted")));
 });
 
-client.on("message", async message => {
-    if(message.content.startsWith("!menu")) {
-        if(message.author.bot) return;
-        let secenek1 = new MessageMenuOption()
-        .setLabel("Abone Ol")
-        .setValue("ABONEOL")
-        .setDescription("Kanalıma abone ol.")
-        .setDefault()
-        .setEmoji("🔴")
-        let secenek2 = new MessageMenuOption()
-        .setLabel("Like At")
-        .setValue("LIKEAT")
-        .setDescription("Videoya like at.")
-        .setDefault()
-        .setEmoji("🔵")
-        let secenek3 = new MessageMenuOption()
-        .setLabel("Bildirimleri Aç")
-        .setValue("BILDIRIM")
-        .setDescription("Kanalımın bildirimlerini aç.")
-        .setDefault()
-        .setEmoji("🟡")
-        let secenek4 = new MessageMenuOption()
-        .setLabel("Yorum Yap")
-        .setValue("YORUMYAP")
-        .setDescription("Videoya yorum yap.")
-        .setDefault()
-        .setEmoji("⚪")
-        let secenek5 = new MessageMenuOption()
-        .setLabel("Sen Kralsın")
-        .setValue("KRALSIN")
-        .setDescription("Kralsın krall <3")
-        .setDefault()
-        .setEmoji("👑")
-        let menu = new MessageMenu()
-        .setID("MENU")
-        .setMaxValues(1)
-        .setMinValues(1)
-        .setPlaceholder("Bana tıkla ve bişeye bas ._.")
-        .addOption(secenek1)
-        .addOption(secenek2)
-        .addOption(secenek3)
-        .addOption(secenek4)
-        .addOption(secenek5)
-        const embed = new MessageEmbed()
-        .setTitle("Menü mü?!")
-        .setDescription("Evet menü. Birini seç.")
-        .setFooter("tanisalim mi")
-        .setColor("BLUE")
-        .setTimestamp()
-        let menumesaj = await message.channel.send(embed, menu)
-        function menuselection(menu) {
-            switch(menu.values[0]) {
-                case "ABONEOL":
-                    menu.reply.send("Anaaa abone oldun mu, harika !!!", true)
-                break;
-                case "LIKEAT":
-                    menu.reply.send("Layk şelalesiiiiiiiii", true)
-                break;
-                case "BILDIRIM":
-                    menu.reply.send("Video yayınlanınca direk koş ha, anlamı kalmaz yoksa :P", true)
-                break;
-                case "YORUMYAP":
-                    menu.reply.send("Yorumunu okicam, söz :D", true)
-                break;
-                case "KRALSIN":
-                    menu.reply.send("Yalan yok, kralsın <3", true)
-                break;
-            }
+
+client.on("message", (message) => {
+
+    if (message.content !== "KANKA BURAYA SADECE 1 KERELİK BİRŞEY YAZ YOKSA HERKES KULLANABİLİR! ÖRNEK !buton KULLANDIKTAN SONRA SALLAMASYON BİSEYLER YAZ ÖRNEK sfklsdlfksşlkfd" || message.author.bot) return;
+  
+  let EtkinlikKatılımcısı = new matthe.MessageButton()
+    .setStyle('red') 
+    .setLabel('Etkinlik Katılımcısı') 
+    .setID('EtkinlikKatılımcısı'); 
+
+  let ÇekilişKatılımcısı = new matthe.MessageButton()
+    .setStyle('green') 
+    .setLabel('Çekiliş Katılımcısı') 
+    .setID('ÇekilişKatılımcısı');
+  
+  message.channel.send(`
+Merhaba!
+ 
+Çekiliş Katılımcısı alarak **nitro, spotify, netflix ve benzeri çekilişlere katılıp ödül sahibi** olabilirsiniz.
+
+Aşağıda bulunan butonlardan **Etkinlik Katılımcısı alarak konserlerimizden, oyunlarımızdan, ve etkinliklerimizden** faydalanabilirsiniz.
+
+\`NOT:\` Kayıtlı , kayıtsız olarak hepiniz bu kanalı görebilmektesiniz. Bu sunucumuzda everyone here atılmayacağından dolayı kesinlikle rollerinizi almayı unutmayın.
+`, { 
+    buttons: [ EtkinlikKatılımcısı, ÇekilişKatılımcısı]
+});
+});
+  
+client.on('clickButton', async (button) => {
+
+    if (button.id === 'EtkinlikKatılımcısı') {
+        if (button.clicker.member.roles.cache.get((ayarlar.EtkinlikKatılımcısı))) {
+            await button.clicker.member.roles.remove((ayarlar.EtkinlikKatılımcısı))
+            await button.reply.think(true);
+            await button.reply.edit("Etkinlik Katılımcısı rolü başarıyla üzerinizden alındı!")
+        } else {
+            await button.clicker.member.roles.add(((ayarlar.EtkinlikKatılımcısı)))
+            await button.reply.think(true);
+            await button.reply.edit("Etkinlik Katılımcısı rolünü başarıyla aldınız!")
         }
-        client.on("clickMenu", menu => {
-            if(menu.message.id == menumesaj.id) {
-                if(menu.clicker.id == message.author.id) {
-                    menuselection(menu)
-                }else{
-                    menu.reply.send("Menü sahibi değilsin.", true)
-                }
-            }
-        })
     }
-}) 
 
 
+    if (button.id === 'ÇekilişKatılımcısı') {
+        if (button.clicker.member.roles.cache.get((ayarlar.ÇekilişKatılımcısı))) {
+            await button.clicker.member.roles.remove((ayarlar.ÇekilişKatılımcısı))
+            await button.reply.think(true);
+            await button.reply.edit(`Çekiliş Katılımcısı rolü başarıyla üzerinizden alındı!`)
+        } else {
+            await button.clicker.member.roles.add((ayarlar.ÇekilişKatılımcısı))
+            await button.reply.think(true);
+            await button.reply.edit(`Çekiliş Katılımcısı rolünü başarıyla aldınız!`)
+        }
+
+    }
+  });
