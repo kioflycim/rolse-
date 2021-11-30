@@ -753,48 +753,34 @@ client.on("message", async message => {
         .setDefault()
         .setEmoji("♌"❌
          let secenek6 = new MessageMenuOption()
-        .setLabel("Başak")
-        .setValue("başak")
+        .setLabel("Baçekemeyen riv riv riv
+        .setValue("baçekemeyen riv riv riv
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
-        .setEmoji("♍")
+        .setEmoji("♍"
         let secenek7 = new MessageMenuOption()
-        .setLabel("Terazi")
-        .setValue("terazi")
+        .setLabel("Te#primyok
+        .setValue("te#primyok
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
-        .setEmoji("♎")
+        .setEmoji("♎"🤤
         let secenek8 = new MessageMenuOption()
-        .setLabel("Akrep")
-        .setValue("akrep")
+        .setLabel("Akmezemdi rakıma
+        .setValue("akmezemdi rakıma
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
-        .setEmoji("♏")
+        .setEmoji("♏"🥛
          let secenek9 = new MessageMenuOption()
-        .setLabel("Yay")
-        .setValue("yay")
-        .setDescription("Rolü almak için tıkla!")
+        .setLabel("YaAbdurrahman
+        .setValue("yaAbdurrahman"        .setDescription("Rolü almak için tıkla!")
         .setDefault()
-        .setEmoji("♐")
+        .setEmoji("♐"🧔
          let secenek10 = new MessageMenuOption()
-        .setLabel("Oğlak")
-        .setValue("oğlak")
+        .setLabel("Oğhani benim beynim"        .setValue("oğhani benim beynim
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
-        .setEmoji("♑")
-         let secenek11 = new MessageMenuOption()
-        .setLabel("Kova")
-        .setValue("kova")
-        .setDescription("Rolü almak için tıkla!")
-        .setDefault()
-        .setEmoji("♒")
-        let secenek12 = new MessageMenuOption()
-        .setLabel("Balık")
-        .setValue("balık")
-        .setDescription("Rolü almak için tıkla!")
-        .setDefault()
-        .setEmoji("♓")
-        let secenek13 = new MessageMenuOption()
+        .setEmoji("♑"🧠
+        let secenek13 1 new MessageMenuOption()
         .setLabel("temizle")
         .setValue("temizle")
         .setDescription("Rolü almak için tıkla!")
@@ -816,9 +802,7 @@ client.on("message", async message => {
         .addOption(secenek9)
         .addOption(secenek10)
         .addOption(secenek11)
-        .addOption(secenek12)
-        .addOption(secenek13)
-        let menumesaj = await message.channel.send("Aşağıdaki menüye tıklayarak Burç Rollerini seçebilirsin!", menu)
+        let menumesaj = await message.channel.send("Aşağıdaki menüye tıklayarak Bullerini seçebilirsin!", menu)
         function menuselection(menu) {
             switch(menu.values[0]) {
                 case "koç":
