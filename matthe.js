@@ -284,18 +284,18 @@ menu.clicker.member.roles.remove ("885265772430110760")
 menu.clicker.member.roles.remove ("884123850944688169")
 menu.clicker.member.roles.remove ("884123852819533925")
 menu.clicker.member.roles.remove("884123853515800606")
-break;
+           break;
            case "Su Yeşili":
                   menu.reply.send("<@&884123852819533925> Rolü verildi", true)
                     menu.clicker.member.roles.add("884123852819533925")
-menu.clicker.member.roles.remove("884123855164166245")
-menu.clicker.member.roles.remove("884123855919136778")
-menu.clicker.member.roles.remove("884123857366188093") 
-menu.clicker.member.roles.remove("884123856690905158")
-menu.clicker.member.roles.remove ("885265772430110760")  
-menu.clicker.member.roles.remove ("884123850944688169")
-menu.clicker.member.roles.remove ("884123851930345493")
-menu.clicker.member.roles.remove("884123853515800606")
+                    menu.clicker.member.roles.remove("884123855164166245")
+                    menu.clicker.member.roles.remove("884123855919136778")
+                    menu.clicker.member.roles.remove("884123857366188093") 
+                    menu.clicker.member.roles.remove("884123856690905158")
+                    menu.clicker.member.roles.remove ("885265772430110760")  
+                    menu.clicker.member.roles.remove ("884123850944688169")
+                    menu.clicker.member.roles.remove ("884123851930345493")
+                    menu.clicker.member.roles.remove("884123853515800606")
 break;
            case "Siyah":
                   menu.reply.send("<@&884123853515800606> Rolü verildi", true)
