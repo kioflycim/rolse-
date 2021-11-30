@@ -211,12 +211,14 @@ client.on("message", async message => {
  break;
                 case "mor":
                     menu.reply.send("<@&884123855919136778> Rolü verildi", true)
-                    menu.clicker.member.roles.add("884123855919136778") 
-                    menu.clicker.member.roles.remove("810934535435976754")
-                    menu.clicker.member.roles.remove("810842301919920181")
-                    menu.clicker.member.roles.remove("810919779460186153")
-                    menu.clicker.member.roles.remove("816656564756676628")
-                    menu.clicker.member.roles.remove("810930370988081192")
+                    menu.clicker.member.roles.add("884123855919136778")
+menu.clicker.member.roles.remove("884123857366188093")           
+menu.clicker.member.roles.remove("884123856690905158")
+menu.clicker.member.roles.remove("884123850944688169")
+menu.clicker.member.roles.remove ("884123851930345493")    
+menu.clicker.member.roles.remove ("884123853515800606")
+menu.clicker.member.roles.remove ("884123852819533925")
+menu.clicker.member.roles.remove ("884123855164166245")
                 break;
                 case "Sarı":
                     menu.reply.send("<@&884123857366188093> Rolü verildi", true)
