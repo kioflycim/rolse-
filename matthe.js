@@ -409,10 +409,7 @@ client.on("message", async message => {
         .setEmoji("♏")
          let secenek9 = new MessageMenuOption()
         .setLabel("Yay")
-        .setValue("yay")
-        .setDescription("Rolü almak için tıkla!")
-        .setDefault()
-        .setEmoji("♐")
+        .setValue("yay
          let secenek10 = new MessageMenuOption()
         .setLabel("Oğlak")
         .setValue("oğlak")
