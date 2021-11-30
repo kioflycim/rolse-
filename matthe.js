@@ -111,58 +111,137 @@ client.on("error", e => {
 });
 
 
-client.on("message", (message) => {
-
-    if (message.content !== "KANKA BURAYA SADECE 1 KERELİK BİRŞEY YAZ YOKSA HERKES KULLANABİLİR! ÖRNEK !buton KULLANDIKTAN SONRA SALLAMASYON BİSEYLER YAZ ÖRNEK sfklsdlfksşlkfd" || message.author.bot) return;
-  
-  let EtkinlikKatılımcısı = new matthe.MessageButton()
-    .setStyle('red') 
-    .setLabel('Etkinlik Katılımcısı') 
-    .setID('EtkinlikKatılımcısı'); 
-
-  let ÇekilişKatılımcısı = new matthe.MessageButton()
-    .setStyle('green') 
-    .setLabel('Çekiliş Katılımcısı') 
-    .setID('ÇekilişKatılımcısı');
-  
-  message.channel.send(`
-Merhaba!
- 
-Çekiliş Katılımcısı alarak **nitro, spotify, netflix ve benzeri çekilişlere katılıp ödül sahibi** olabilirsiniz.
-
-Aşağıda bulunan butonlardan **Etkinlik Katılımcısı alarak konserlerimizden, oyunlarımızdan, ve etkinliklerimizden** faydalanabilirsiniz.
-
-\`NOT:\` Kayıtlı , kayıtsız olarak hepiniz bu kanalı görebilmektesiniz. Bu sunucumuzda everyone here atılmayacağından dolayı kesinlikle rollerinizi almayı unutmayın.
-`, { 
-    buttons: [ EtkinlikKatılımcısı, ÇekilişKatılımcısı]
-});
-});
-  
-client.on('clickButton', async (button) => {
-
-    if (button.id === 'EtkinlikKatılımcısı') {
-        if (button.clicker.member.roles.cache.get((ayarlar.EtkinlikKatılımcısı))) {
-            await button.clicker.member.roles.remove((ayarlar.EtkinlikKatılımcısı))
-            await button.reply.think(true);
-            await button.reply.edit("Etkinlik Katılımcısı rolü başarıyla üzerinizden alındı!")
-        } else {
-            await button.clicker.member.roles.add(((ayarlar.EtkinlikKatılımcısı)))
-            await button.reply.think(true);
-            await button.reply.edit("Etkinlik Katılımcısı rolünü başarıyla aldınız!")
+const dbuttons = require("discord-buttons");
+const { MessageMenu, MessageMenuOption } = require("discord-buttons")
+client.on("message", async message => {
+    if(message.content.startsWith(".renk")) {
+        if(message.author.bot) return;
+        let secenek1 = new MessageMenuOption()
+        .setLabel("Kırmızı")
+        .setValue("kırmızı")
+        .setDescription("Rolü almak için tıkla!")
+        .setDefault()
+        .setEmoji("🍒") 
+        let secenek2 = new MessageMenuOption()
+        .setLabel("Sarı")
+        .setValue("sarı")
+        .setDescription("Rolü almak için tıkla!")
+        .setDefault()
+        .setEmoji("🍋")
+        let secenek3 = new MessageMenuOption()
+        .setLabel("Mor")
+        .setValue("mor")
+        .setDescription("Rolü almak için tıkla!")
+        .setDefault()
+        .setEmoji("🍇")
+        let secenek4 = new MessageMenuOption()
+        .setLabel("Yeşil")
+        .setValue("yeşil")
+        .setDescription("Rolü almak için tıkla!")
+        .setDefault()
+        .setEmoji("🍏")
+        let secenek7 = new MessageMenuOption()
+        .setLabel("Turuncu")
+        .setValue("turuncu")
+        .setDescription("Rolü almak için tıkla!")
+        .setDefault()
+        .setEmoji("🥕")
+        let secenek6 = new MessageMenuOption()
+        .setLabel("Mavi")
+        .setValue("mavi")
+        .setDescription("Rolü almak için tıkla!")
+        .setDefault()
+        .setEmoji("🧊")
+        let secenek10 = new MessageMenuOption()
+        .setLabel("temizle")
+        .setValue("temizle")
+        .setDescription("Rolü almak için tıkla!")
+        .setDefault()
+        .setEmoji("885886965495504896")
+        let menu = new MessageMenu()
+        .setID("MENU")
+        .setMaxValues(1)
+        .setMinValues(1)
+        .setPlaceholder("Renk Rollerini Seçebilirsiniz")
+        .addOption(secenek1)
+        .addOption(secenek2)
+        .addOption(secenek3)
+        .addOption(secenek4)
+        .addOption(secenek7)
+        .addOption(secenek6)
+        .addOption(secenek10)
+        let menumesaj = await message.channel.send("Aşağıdaki menüye tıklayarak Renk Rollerini seçebilirsin!", menu)
+        function menuselection(menu) {
+            switch(menu.values[0]) {
+                case "kırmızı":
+                    menu.reply.send("<884123850944688169> Rolü verildi", true)
+                    menu.clicker.member.roles.add("884123850944688169")
+                    menu.clicker.member.roles.remove("810842301919920181")
+                    menu.clicker.member.roles.remove("911584013569892392")
+                    menu.clicker.member.roles.remove("911584028426129458")
+                    menu.clicker.member.roles.remove("911584036386906153")
+                    menu.clicker.member.roles.remove("911584760579645471")
+                break;
+                case "sarı":
+                    menu.reply.send("<@&810842301919920181> Rolü verildi", true)
+                    menu.clicker.member.roles.add("810842301919920181") 
+                    menu.clicker.member.roles.remove("911583985811988501")
+                    menu.clicker.member.roles.remove("911584013569892392")
+                    menu.clicker.member.roles.remove("911584028426129458")
+                    menu.clicker.member.roles.remove("911584036386906153")
+                    menu.clicker.member.roles.remove("911584760579645471")
+                break;
+                case "mor":
+                    menu.reply.send("<@&810846156791218177> Rolü verildi", true)
+                    menu.clicker.member.roles.add("810846156791218177")
+                    menu.clicker.member.roles.remove("911583985811988501")
+                    menu.clicker.member.roles.remove("911584008859705364")
+                    menu.clicker.member.roles.remove("911584028426129458")
+                    menu.clicker.member.roles.remove("911584036386906153")
+                    menu.clicker.member.roles.remove("911584760579645471")
+                break;
+                case "yeşil":
+                    menu.reply.send("<@&810930370988081192> Rolü verildi", true)
+                    menu.clicker.member.roles.add("810930370988081192")
+                    menu.clicker.member.roles.remove("911583985811988501")
+                    menu.clicker.member.roles.remove("911584008859705364")
+                    menu.clicker.member.roles.remove("911584013569892392")
+                    menu.clicker.member.roles.remove("911584036386906153")
+                    menu.clicker.member.roles.remove("911584760579645471")
+                break;
+                case "turuncu":
+                    menu.reply.send("<@&911584036386906153> Rolü verildi", true)
+                    menu.clicker.member.roles.add("911584036386906153")
+                    menu.clicker.member.roles.remove("911583985811988501")
+                    menu.clicker.member.roles.remove("911584008859705364")
+                    menu.clicker.member.roles.remove("911584013569892392")
+                    menu.clicker.member.roles.remove("911584028426129458")
+                    menu.clicker.member.roles.remove("911584760579645471")
+                break;
+                case "mavi":
+                    menu.reply.send("<@&911584760579645471> Rolü verildi", true)
+                    menu.clicker.member.roles.add("911584760579645471")
+                    menu.clicker.member.roles.remove("911583985811988501")
+                    menu.clicker.member.roles.remove("911584008859705364")
+                    menu.clicker.member.roles.remove("911584013569892392")
+                    menu.clicker.member.roles.remove("911584028426129458")
+                    menu.clicker.member.roles.remove("911584036386906153")
+                break;
+                case "temizle":
+                  menu.reply.send("Roller alındı", true)
+                  menu.clicker.member.roles.remove("911583985811988501")
+                  menu.clicker.member.roles.remove("911584008859705364")
+                  menu.clicker.member.roles.remove("911584013569892392")
+                  menu.clicker.member.roles.remove("911584028426129458")
+                  menu.clicker.member.roles.remove("911584036386906153")
+                  menu.clicker.member.roles.remove("911584760579645471")
+              break;  
+            }
         }
+        client.on("clickMenu", menu => {
+            if(menu.message.id == menumesaj.id) {
+                    menuselection(menu)
+            }
+        })
     }
-
-
-    if (button.id === 'ÇekilişKatılımcısı') {
-        if (button.clicker.member.roles.cache.get((ayarlar.ÇekilişKatılımcısı))) {
-            await button.clicker.member.roles.remove((ayarlar.ÇekilişKatılımcısı))
-            await button.reply.think(true);
-            await button.reply.edit(`Çekiliş Katılımcısı rolü başarıyla üzerinizden alındı!`)
-        } else {
-            await button.clicker.member.roles.add((ayarlar.ÇekilişKatılımcısı))
-            await button.reply.think(true);
-            await button.reply.edit(`Çekiliş Katılımcısı rolünü başarıyla aldınız!`)
-        }
-
-    }
-  });
+});
