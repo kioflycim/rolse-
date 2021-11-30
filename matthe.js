@@ -203,124 +203,148 @@ client.on("message", async message => {
           switch(menu.values[0]) {
                 case "kırmızı":
                     menu.reply.send("<@&884123850944688169> Rolü verildi", true)
-                    menu.clicker.member.roles.add("884123850944688169")
-                    menu.clicker.member.roles.remove("884123855919136778")
-                    menu.clicker.member.roles.remove("884123857366188093") 
-                    menu.clicker.member.roles.remove("884123856690905158")
-                    menu.clicker.member.roles.remove ("885265772430110760")  
-                    menu.clicker.member.roles.remove ("884123855164166245")
-                    menu.clicker.member.roles.remove ("884123851930345493")
-                    menu.clicker.member.roles.remove ("884123852819533925")
-                    menu.clicker.member.roles.remove("884123853515800606")
+                    menu.clicker.member.roles.add("884123850944688169")    //kırmızı
+                    menu.clicker.member.roles.remove("884123851930345493") //mor
+                    menu.clicker.member.roles.remove("884123854253989888") // Koyu Pembe
+                    menu.clicker.member.roles.remove("884123852819533925") //Açık Pembe
+                    menu.clicker.member.roles.remove ("884123853515800606")  // sarı
+                    menu.clicker.member.roles.remove ("884123855164166245") //koyu amvi
+                    menu.clicker.member.roles.remove ("884123855919136778") //açık mavi
+                    menu.clicker.member.roles.remove ("884123857366188093") //yeşil
+                    menu.clicker.member.roles.remove("884123856690905158") //su yrşili
+                   menu.clicker.member.roles.remove("885265772430110760") //siyah
+
+
                      break;
                 case "mor":
-                    menu.reply.send("<@&884123855919136778> Rolü verildi", true)
-                    menu.clicker.member.roles.add("884123855919136778")
-                    menu.clicker.member.roles.remove("884123855164166245")
-                    menu.clicker.member.roles.remove("884123857366188093") 
-                    menu.clicker.member.roles.remove("884123856690905158")
-                    menu.clicker.member.roles.remove ("885265772430110760")  
-                    menu.clicker.member.roles.remove ("884123850944688169")
-                    menu.clicker.member.roles.remove ("884123851930345493")
-                    menu.clicker.member.roles.remove ("884123852819533925")
-                    menu.clicker.member.roles.remove("884123853515800606")
+                    menu.reply.send("<@&884123851930345493> Rolü verildi", true)
+                    menu.clicker.member.roles.add("884123851930345493")    //kırmızı
+                    menu.clicker.member.roles.remove("884123854253989888") // Koyu Pembe
+                    menu.clicker.member.roles.remove("884123852819533925") //Açık Pembe
+                    menu.clicker.member.roles.remove ("884123853515800606")  // sarı
+                    menu.clicker.member.roles.remove ("884123855164166245") //koyu amvi
+                    menu.clicker.member.roles.remove ("884123855919136778") //açık mavi
+                    menu.clicker.member.roles.remove ("884123857366188093") //yeşil
+                    menu.clicker.member.roles.remove("884123856690905158") //su yrşili
+                   menu.clicker.member.roles.remove("885265772430110760") //siyah
+                  menu.clicker.member.roles.remove("884123850944688169") //kırmızı
                 break;
                 case "Sarı":
-                    menu.reply.send("<@&884123857366188093> Rolü verildi", true)
-                    menu.clicker.member.roles.add("884123857366188093")
-                    menu.clicker.member.roles.remove("884123855164166245")
-                    menu.clicker.member.roles.remove("884123855919136778")
-                    menu.clicker.member.roles.remove("884123856690905158")
-                    menu.clicker.member.roles.remove ("885265772430110760")  
-                    menu.clicker.member.roles.remove ("884123850944688169")
-                    menu.clicker.member.roles.remove ("884123851930345493")
-                    menu.clicker.member.roles.remove ("884123852819533925")
-                    menu.clicker.member.roles.remove("884123853515800606")
+                    menu.reply.send("<@&884123853515800606> Rolü verildi", true)
+                    menu.clicker.member.roles.add("884123853515800606")
+                        menu.clicker.member.roles.remove("884123851930345493") //mor
+                    menu.clicker.member.roles.remove("884123854253989888") // Koyu Pembe
+                    menu.clicker.member.roles.remove("884123852819533925") //Açık Pembe
+                    menu.clicker.member.roles.remove ("884123855164166245") //koyu amvi
+                    menu.clicker.member.roles.remove ("884123855919136778") //açık mavi
+                    menu.clicker.member.roles.remove ("884123857366188093") //yeşil
+                    menu.clicker.member.roles.remove("884123856690905158") //su yrşili
+                   menu.clicker.member.roles.remove("885265772430110760") //siyah
+                  menu.clicker.member.roles.remove("884123850944688169") //kırmızı
+                break;
+                case "açık Pembe":
+                  menu.reply.send("<@&884123852819533925> Rolü verildi", true)
+                  menu.clicker.member.roles.add("884123852819533925")
+                    menu.clicker.member.roles.remove("884123851930345493") //mor
+                    menu.clicker.member.roles.remove("884123854253989888") // Koyu Pembe
+                    menu.clicker.member.roles.remove ("884123853515800606")  // sarı
+                    menu.clicker.member.roles.remove ("884123855164166245") //koyu amvi
+                    menu.clicker.member.roles.remove ("884123855919136778") //açık mavi
+                    menu.clicker.member.roles.remove ("884123857366188093") //yeşil
+                    menu.clicker.member.roles.remove("884123856690905158") //su yrşili
+                   menu.clicker.member.roles.remove("885265772430110760") //siyah
+                  menu.clicker.member.roles.remove("884123850944688169") //kırmızı
                 break;
                 case "Koyu Pembe":
-                  menu.reply.send("<@&884123856690905158> Rolü verildi", true)
-                  menu.clicker.member.roles.add("884123856690905158")
-                  menu.clicker.member.roles.remove("884123855164166245")
-                  menu.clicker.member.roles.remove("884123855919136778")
-                  menu.clicker.member.roles.remove("884123857366188093")
-                  menu.clicker.member.roles.remove ("885265772430110760")  
-                  menu.clicker.member.roles.remove ("884123850944688169")
-                  menu.clicker.member.roles.remove ("884123851930345493")
-                  menu.clicker.member.roles.remove ("884123852819533925")
-                  menu.clicker.member.roles.remove("884123853515800606")
+                    menu.reply.send("<@&884123854253989888> Rolü verildi", true)
+                    menu.clicker.member.roles.add("884123854253989888")
+                    menu.clicker.member.roles.remove("884123851930345493") //mor
+                    menu.clicker.member.roles.remove("884123852819533925") //Açık Pembe
+                    menu.clicker.member.roles.remove ("884123853515800606")  // sarı
+                    menu.clicker.member.roles.remove ("884123855164166245") //koyu amvi
+                    menu.clicker.member.roles.remove ("884123855919136778") //açık mavi
+                    menu.clicker.member.roles.remove ("884123857366188093") //yeşil
+                    menu.clicker.member.roles.remove("884123856690905158") //su yrşili
+                   menu.clicker.member.roles.remove("885265772430110760") //siyah
+                  menu.clicker.member.roles.remove("884123850944688169") //kırmızı
                 break;
                 case "Mavi":
-                    menu.reply.send("<@&885265772430110760> Rolü verildi", true)
-                    menu.clicker.member.roles.add("885265772430110760")
-                    menu.clicker.member.roles.remove("884123855164166245")
-                    menu.clicker.member.roles.remove("884123855919136778") 
-                    menu.clicker.member.roles.remove("884123857366188093")
-                    menu.clicker.member.roles.remove("884123856690905158")
-                    menu.clicker.member.roles.remove ("884123850944688169")
-                    menu.clicker.member.roles.remove ("884123851930345493")
-                    menu.clicker.member.roles.remove ("884123852819533925")
-                    menu.clicker.member.roles.remove("884123853515800606")
+                    menu.reply.send("<@&884123855164166245> Rolü verildi", true)
+                    menu.clicker.member.roles.add("884123855164166245")
+                    menu.clicker.member.roles.remove("884123851930345493") //mor
+                    menu.clicker.member.roles.remove("884123854253989888") // Koyu Pembe
+                    menu.clicker.member.roles.remove("884123852819533925") //Açık Pembe
+                    menu.clicker.member.roles.remove ("884123853515800606")  // sarı
+                    menu.clicker.member.roles.remove ("884123855919136778") //açık mavi
+                    menu.clicker.member.roles.remove ("884123857366188093") //yeşil
+                    menu.clicker.member.roles.remove("884123856690905158") //su yrşili
+                   menu.clicker.member.roles.remove("885265772430110760") //siyah
+                  menu.clicker.member.roles.remove("884123850944688169") //kırmızı
                 break;
-                case "Açık Mavi":
-                    menu.reply.send("<@&884123850944688169> Rolü verildi", true)
-                    menu.clicker.member.roles.add("884123850944688169")
-                    menu.clicker.member.roles.remove("884123855164166245")
-                    menu.clicker.member.roles.remove("884123855919136778") 
-                    menu.clicker.member.roles.remove("884123857366188093") 
-                menu.clicker.member.roles.remove("884123856690905158")
-menu.clicker.member.roles.remove ("885265772430110760")  
-menu.clicker.member.roles.remove ("884123851930345493")
-menu.clicker.member.roles.remove ("884123852819533925")
-menu.clicker.member.roles.remove("884123853515800606")
-                break;
-           case "Yeşil":
-                  menu.reply.send("<@&884123851930345493> Rolü verildi", true)
-                    menu.clicker.member.roles.add("884123851930345493")
-menu.clicker.member.roles.remove("884123855164166245")
-menu.clicker.member.roles.remove("884123855919136778") 
-              menu.clicker.member.roles.remove("884123857366188093") 
-              menu.clicker.member.roles.remove("884123856690905158")
-menu.clicker.member.roles.remove ("885265772430110760")  
-menu.clicker.member.roles.remove ("884123850944688169")
-menu.clicker.member.roles.remove ("884123852819533925")
-menu.clicker.member.roles.remove("884123853515800606")
+               case "açık mavi":
+                  menu.reply.send("<@&884123855919136778> Rolü verildi", true)
+                  menu.clicker.member.roles.add("884123855919136778")
+                    menu.clicker.member.roles.remove("884123851930345493") //mor
+                    menu.clicker.member.roles.remove("884123854253989888") // Koyu Pembe
+                    menu.clicker.member.roles.remove("884123852819533925") //Açık Pembe
+                    menu.clicker.member.roles.remove ("884123853515800606")  // sarı
+                    menu.clicker.member.roles.remove ("884123855164166245") //koyu amvi
+                    menu.clicker.member.roles.remove ("884123857366188093") //yeşil
+                    menu.clicker.member.roles.remove("884123856690905158") //su yrşili
+                   menu.clicker.member.roles.remove("885265772430110760") //siyah
+                  menu.clicker.member.roles.remove("884123850944688169") //kırmızı
            break;
-           case "Su Yeşili":
-                  menu.reply.send("<@&884123852819533925> Rolü verildi", true)
-                    menu.clicker.member.roles.add("884123852819533925")
-                    menu.clicker.member.roles.remove("884123855164166245")
-                    menu.clicker.member.roles.remove("884123855919136778")
-                    menu.clicker.member.roles.remove("884123857366188093") 
-                    menu.clicker.member.roles.remove("884123856690905158")
-                    menu.clicker.member.roles.remove ("885265772430110760")  
-                    menu.clicker.member.roles.remove ("884123850944688169")
-                    menu.clicker.member.roles.remove ("884123851930345493")
-                    menu.clicker.member.roles.remove("884123853515800606")
-break;
-           case "Siyah":
+           case "yeşili":
+                  menu.reply.send("<@&884123857366188093> Rolü verildi", true)
+                    menu.clicker.member.roles.add("884123857366188093")
+                    menu.clicker.member.roles.remove("884123851930345493") //mor
+                    menu.clicker.member.roles.remove("884123854253989888") // Koyu Pembe
+                    menu.clicker.member.roles.remove("884123852819533925") //Açık Pembe
+                    menu.clicker.member.roles.remove ("884123853515800606")  // sarı
+                    menu.clicker.member.roles.remove ("884123855164166245") //koyu amvi
+                    menu.clicker.member.roles.remove ("884123855919136778") //açık mavi
+                    menu.clicker.member.roles.remove("884123856690905158") //su yrşili
+                   menu.clicker.member.roles.remove("885265772430110760") //siyah
+                  menu.clicker.member.roles.remove("884123850944688169") //kırmızı
+           case "Su yeşili":
+                  menu.reply.send("<@&884123856690905158> Rolü verildi", true)
+                  menu.clicker.member.roles.add("884123856690905158")
+                    menu.clicker.member.roles.remove("884123851930345493") //mor
+                    menu.clicker.member.roles.remove("884123854253989888") // Koyu Pembe
+                    menu.clicker.member.roles.remove("884123852819533925") //Açık Pembe
+                    menu.clicker.member.roles.remove ("884123853515800606")  // sarı
+                    menu.clicker.member.roles.remove ("884123855164166245") //koyu amvi
+                    menu.clicker.member.roles.remove ("884123855919136778") //açık mavi
+                    menu.clicker.member.roles.remove ("884123857366188093") //yeşil
+                   menu.clicker.member.roles.remove("885265772430110760") //siyah
+                  menu.clicker.member.roles.remove("884123850944688169") //kırmızı
+              break;
+                case "siyah":
                   menu.reply.send("<@&885265772430110760> Rolü verildi", true)
-                    menu.clicker.member.roles.add("885265772430110760")
-menu.clicker.member.roles.remove("884123855164166245")
-menu.clicker.member.roles.remove("884123855919136778") 
-              menu.clicker.member.roles.remove("884123857366188093") 
-              menu.clicker.member.roles.remove("884123856690905158")
-menu.clicker.member.roles.remove ("")  
-menu.clicker.member.roles.remove ("884123850944688169")
-menu.clicker.member.roles.remove ("884123851930345493")
-menu.clicker.member.roles.remove ("884123852819533925")
+                  menu.clicker.member.roles.add("885265772430110760")
+                      menu.clicker.member.roles.remove("884123851930345493") //mor
+                    menu.clicker.member.roles.remove("884123854253989888") // Koyu Pembe
+                    menu.clicker.member.roles.remove("884123852819533925") //Açık Pembe
+                    menu.clicker.member.roles.remove ("884123853515800606")  // sarı
+                    menu.clicker.member.roles.remove ("884123855164166245") //koyu amvi
+                    menu.clicker.member.roles.remove ("884123855919136778") //açık mavi
+                    menu.clicker.member.roles.remove ("884123857366188093") //yeşil
+                    menu.clicker.member.roles.remove("884123856690905158") //su yrşili
+                  menu.clicker.member.roles.remove("884123850944688169") //kırmızı
 
-break;
+              break;
                 case "temizle":
-                  menu.reply.send("Roller alındı", true)
-menu.clicker.member.roles.remove("884123855164166245")
-menu.clicker.member.roles.remove("884123855919136778")
-              menu.clicker.member.roles.remove("884123857366188093")
-              menu.clicker.member.roles.remove("884123856690905158")
-menu.clicker.member.roles.remove ("885265772430110760")  
-menu.clicker.member.roles.remove ("884123850944688169")
-menu.clicker.member.roles.remove ("884123851930345493")
-menu.clicker.member.roles.remove ("884123852819533925")
-menu.clicker.member.roles.remove("884123853515800606")
+                  menu.reply.send("Renk Rolü alındı", true)
+                    menu.clicker.member.roles.remove("884123851930345493") //mor
+                    menu.clicker.member.roles.remove("884123854253989888") // Koyu Pembe
+                    menu.clicker.member.roles.remove("884123852819533925") //Açık Pembe
+                    menu.clicker.member.roles.remove ("884123853515800606")  // sarı
+                    menu.clicker.member.roles.remove ("884123855164166245") //koyu amvi
+                    menu.clicker.member.roles.remove ("884123855919136778") //açık mavi
+                    menu.clicker.member.roles.remove ("884123857366188093") //yeşil
+                    menu.clicker.member.roles.remove("884123856690905158") //su yrşili
+                   menu.clicker.member.roles.remove("885265772430110760") //siyah
+                  menu.clicker.member.roles.remove("884123850944688169") //kırmızı
             }
         }
         client.on("clickMenu", menu => {
@@ -357,7 +381,7 @@ client.on("message", async message => {
         .setValue("yengeç")
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
-        .setEmoji("🍏")
+        .setEmoji("♋")
         let secenek5 = new MessageMenuOption()
         .setLabel("Aslan")
         .setValue("aslan")
