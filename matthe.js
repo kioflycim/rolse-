@@ -722,12 +722,51 @@ client.on("message", async message => {
     }
 });
  
-        let secenek13 1 new MessageMenuOption()
+        client.on("message", async message => {
+    if(message.content.startsWith(".hawlii")) {
+        if(message.author.bot) return;
+        let secenek1 = new MessageMenuOption()
+        .setLabel("Boğa")
+        .setValue("boğa")
+        .setDescription("Rolü almak için tıkla!")
+        .setDefault()
+        .setEmoji("♉") 
+        let secenek2 = new MessageMenuOption()
+        .setLabel("Sarı")
+        .setValue("sarı")
+        .setDescription("Rolü almak için tıkla!")
+        .setDefault()
+        .setEmoji("🍋")
+        let secenek3 = new MessageMenuOption()
+        .setLabel("Mor")
+        .setValue("mor")
+        .setDescription("Rolü almak için tıkla!")
+        .setDefault()
+        .setEmoji("🍇")
+        let secenek4 = new MessageMenuOption()
+        .setLabel("Yeşil")
+        .setValue("yeşil")
+        .setDescription("Rolü almak için tıkla!")
+        .setDefault()
+        .setEmoji("🍏")
+        let secenek5 = new MessageMenuOption()
+        .setLabel("Turuncu")
+        .setValue("turuncu")
+        .setDescription("Rolü almak için tıkla!")
+        .setDefault()
+        .setEmoji("🥕")
+        let secenek6 = new MessageMenuOption()
+        .setLabel("")
+        .setValue("")
+        .setDescription("Rolü almak için tıkla!")
+        .setDefault()
+        .setEmoji("")
+        let secenek11 = new MessageMenuOption()
         .setLabel("temizle")
         .setValue("temizle")
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
-        .setEmoji("🗑️")
+        .setEmoji("885886965495504896")
         let menu = new MessageMenu()
         .setID("MENU")
         .setMaxValues(1)
@@ -736,7 +775,6 @@ client.on("message", async message => {
         .addOption(secenek1)
         .addOption(secenek2)
         .addOption(secenek3)
-        .addOption(secenek4)
         .addOption(secenek5)
         .addOption(secenek6)
         .addOption(secenek7)
@@ -744,10 +782,9 @@ client.on("message", async message => {
         .addOption(secenek9)
         .addOption(secenek10)
         .addOption(secenek11)
-        let menumesaj = await message.channel.send("Aşağıdaki menüye tıklayarak Buistediğin llerini seçebilirsin!", menu)
-        function menuselection(menu) {
+        let menumesaj = await message.channel.send("Çekiliş katılımcısı ve Partner Görme rollerini alabilirsiniz!", menu)
             switch(menu.values[0]) {
-                case "kocertified illegal people
+              case "":
                     menu.reply.send("<@&884123886730502145> Rolü verildi", true)
                     menu.clicker.member.roles.add("884123886730502145")
 memenu.clicker.member.roles.remove("915023584613773333")
@@ -758,8 +795,9 @@ menu.clicker.member.roles.remove("914991907644518410")
 menu.clicker.member.roles.remove("914992001315917844")
 menu.clicker.member.roles.remove("914992030797676616")
 menu.clicker.member.roles.remove("914994035725324308")
-menu.clicker.member.roles.remove("914994197638053948")               break;
-                case "boZaafYok
+menu.clicker.member.roles.remove("914994197638053948")               
+                break;
+              case "#ZaafYok":
                     menu.reply.send("<@&884123887795834940> Rolü verildi", true)
                     menu.clicker.member.roles.add("884123887795834940") 
   menu.clicker.member.roles.remove("915023584613773333")
@@ -770,8 +808,9 @@ menu.clicker.member.roles.remove("914991907644518410")
 menu.clicker.member.roles.remove("914992001315917844")
 menu.clicker.member.roles.remove("914992030797676616")
 menu.clicker.member.roles.remove("914994035725324308")
-menu.clicker.member.roles.remove("914994197638053948")               break;
-                case "ik#kimseciklerbaşkaşgöz
+menu.clicker.member.roles.remove("914994197638053948")             
+                break;
+              case "#kimseciklerbaşkaşgöz":
                     menu.reply.send("<@&884123888529858621> Rolü verildi", true)
                     menu.clicker.member.roles.add("884123888529858621")
   menu.clicker.member.roles.remove("915023584613773333")
@@ -782,8 +821,9 @@ menu.clicker.member.roles.remove("914991907644518410")
 menu.clicker.member.roles.remove("914992001315917844")
 menu.clicker.member.roles.remove("914992030797676616")
 menu.clicker.member.roles.remove("914994035725324308")
-menu.clicker.member.roles.remove("914994197638053948")               break;
-                case "yekimseciklerbaşkaşgöz
+menu.clicker.member.roles.remove("914994197638053948")             
+                break;
+              case "yekimseciklerbaşkaşgöz":
                     menu.reply.send("<@&884123889356128286> Rolü verildi", true)
                     menu.clicker.member.roles.add("884123889356128286")
   menu.clicker.member.roles.remove("915023584613773333")
@@ -794,8 +834,9 @@ menu.clicker.member.roles.remove("914991907644518410")
 menu.clicker.member.roles.remove("914992001315917844")
 menu.clicker.member.roles.remove("914992030797676616")
 menu.clicker.member.roles.remove("914994035725324308")
-menu.clicker.member.roles.remove("914994197638053948")               break;
-                case "askeyfimmeyfim10numara
+menu.clicker.member.roles.remove("914994197638053948")   
+                break;
+              case "keyfimmeyfim10numara":
                     menu.reply.send("<@&884123890081751060> Rolü verildi", true)
                     menu.clicker.member.roles.add("884123890081751060")
 memenu.clicker.member.roles.remove("915023584613773333")
@@ -806,8 +847,9 @@ menu.clicker.member.roles.remove("914991907644518410")
 menu.clicker.member.roles.remove("914992001315917844")
 menu.clicker.member.roles.remove("914992030797676616")
 menu.clicker.member.roles.remove("914994035725324308")
-menu.clicker.member.roles.remove("914994197638053948")               break;
-                case "başerefsiz insan sevmem !?!
+menu.clicker.member.roles.remove("914994197638053948")     
+                break;
+               case "başerefsiz insan sevmem !?!":
                     menu.reply.send("<@&884123890857705472> Rolü verildi", true)
                     menu.clicker.member.roles.add("884123890857705472")
 memenu.clicker.member.roles.remove("915023584613773333")
@@ -818,8 +860,9 @@ menu.clicker.member.roles.remove("914991907644518410")
 menu.clicker.member.roles.remove("914992001315917844")
 menu.clicker.member.roles.remove("914992030797676616")
 menu.clicker.member.roles.remove("914994035725324308")
-menu.clicker.member.roles.remove("914994197638053948")               break;
-              case "teşerefsiz insan sevmem !?!
+menu.clicker.member.roles.remove("914994197638053948")      
+                break;
+                case "teşerefsiz insan sevmem !?!":
                     menu.reply.send("<@&884123891570733096> Rolü verildi", true)
                     menu.clicker.member.roles.add("884123891570733096")
 memenu.clicker.member.roles.remove("915023584613773333")
@@ -830,7 +873,8 @@ menu.clicker.member.roles.remove("914991907644518410")
 menu.clicker.member.roles.remove("914992001315917844")
 menu.clicker.member.roles.remove("914992030797676616")
 menu.clicker.member.roles.remove("914994035725324308")
-menu.clicker.member.roles.remove("914994197638053948")               break;
+menu.clicker.member.roles.remove("914994197638053948") 
+                break;
                 case "akrep":
                     menu.reply.send("<@&884123892266987541> Rolü verildi", true)
                     menu.clicker.member.roles.add("884123892266987541")
@@ -842,8 +886,9 @@ menu.clicker.member.roles.remove("914991907644518410")
 menu.clicker.member.roles.remove("914992001315917844")
 menu.clicker.member.roles.remove("914992030797676616")
 menu.clicker.member.roles.remove("914994035725324308")
-menu.clicker.member.roles.remove("914994197638053948")               break;
-                case "yaçekemeyen riv riv riv"                    menu.reply.send("<@&884123893084860436> Rolü verildi", true)
+menu.clicker.member.roles.remove("914994197638053948")    
+                break;
+                case "yaçekemeyen riv riv riv":                   menu.reply.send("<@&884123893084860436> Rolü verildi", true)
                     menu.clicker.member.roles.add("884123893084860436")
 memenu.clicker.member.roles.remove("915023584613773333")
 menu.clicker.member.roles.remove("914990812947947573")
@@ -853,8 +898,9 @@ menu.clicker.member.roles.remove("914991907644518410")
 menu.clicker.member.roles.remove("914992001315917844")
 menu.clicker.member.roles.remove("914992030797676616")
 menu.clicker.member.roles.remove("914994035725324308")
-menu.clicker.member.roles.remove("914994197638053948")               break;
-                case "oğabdurrahman digdık digdık
+menu.clicker.member.roles.remove("914994197638053948") 
+                break;
+                case "":
                     menu.reply.send("<@&884123893563027497> Rolü verildi", true)
                     menu.clicker.member.roles.add("884123893563027497")
 memenu.clicker.member.roles.remove("915023584613773333")
