@@ -721,65 +721,7 @@ client.on("message", async message => {
         })
     }
 });
-    client.on("message", async message => {  
-    if(message.content.startsWith(".sdhawli) {
-        if(message.author.bot) return;
-        let secenek1 = new MessageMenuOption()
-        .setLabel("Kocertified illegal people
-        .setValue("kocertified illegal people
-        .setDescription("Rolü almak için tıkla!")
-        .setDefault()
-        .setEmoji("♈"💰 
-        let secenek2 = new MessageMenuOption()
-        .setLabel("Bo#ZaafYok
-        .setValue("bo#ZaafYok
-        .setDescription("Rolü almak için tıkla!")
-        .setDefault()
-        .setEmoji("♉"😎
-        let secenek3 = new MessageMenuOption()
-        .setLabel("("#kimseciklerbaşkaşgöz")       .setValue("ik#kimseciklerbaşkaşgöz
-        .setDescription("Rolü almak için tıkla!")
-        .setDefault()
-        .setEmoji("♊"👑
-        let secenek4 = new MessageMenuOption()
-        .setLabel("Ye#keyfimmeyfim10numara"        .setValue("ye#keyfimmeyfim10numara
-        .setDescription("Rolü almak için tıkla!")
-        .setDefault()
-        .setEmoji("♋"🔟
-        let secenek5 = new MessageMenuOption()
-        .setLabel("Asşerefsiz insan sevmem !?!
-        .setValue("asşerefsiz insan sevmem !?!
-        .setDescription("Rolü almak için tıkla!")
-        .setDefault()
-        .setEmoji("♌"❌
-         let secenek6 = new MessageMenuOption()
-        .setLabel("Baçekemeyen riv riv riv
-        .setValue("baçekemeyen riv riv riv
-        .setDescription("Rolü almak için tıkla!")
-        .setDefault()
-        .setEmoji("♍"
-        let secenek7 = new MessageMenuOption()
-        .setLabel("Te#primyok
-        .setValue("te#primyok
-        .setDescription("Rolü almak için tıkla!")
-        .setDefault()
-        .setEmoji("♎"🤤
-        let secenek8 = new MessageMenuOption()
-        .setLabel("Akmezemdi rakıma
-        .setValue("akmezemdi rakıma
-        .setDescription("Rolü almak için tıkla!")
-        .setDefault()
-        .setEmoji("♏"🥛
-         let secenek9 = new MessageMenuOption()
-        .setLabel("YaAbdurrahman
-        .setValue("yaAbdurrahman"        .setDescription("Rolü almak için tıkla!")
-        .setDefault()
-        .setEmoji("♐"🧔
-         let secenek10 = new MessageMenuOption()
-        .setLabel("Oğhani benim beynim"        .setValue("oğhani benim beynim
-        .setDescription("Rolü almak için tıkla!")
-        .setDefault()
-        .setEmoji("♑"🧠
+ 
         let secenek13 1 new MessageMenuOption()
         .setLabel("temizle")
         .setValue("temizle")
