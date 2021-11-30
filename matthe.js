@@ -130,7 +130,7 @@ client.on("message", async message => {
         .setEmoji("🍇")
         let secenek3 = new MessageMenuOption()
         .setLabel("Sarı")
-        .setValue("Sarı")
+        .setValue("sarı")
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
         .setEmoji("🍋")
@@ -213,8 +213,6 @@ client.on("message", async message => {
                     menu.clicker.member.roles.remove ("884123857366188093") //yeşil
                     menu.clicker.member.roles.remove("884123856690905158") //su yrşili
                    menu.clicker.member.roles.remove("885265772430110760") //siyah
-
-
                      break;
                 case "mor":
                     menu.reply.send("<@&884123851930345493> Rolü verildi", true)
@@ -229,7 +227,7 @@ client.on("message", async message => {
                    menu.clicker.member.roles.remove("885265772430110760") //siyah
                   menu.clicker.member.roles.remove("884123850944688169") //kırmızı
                 break;
-                case "Sarı":
+                case "sarı":
                     menu.reply.send("<@&884123853515800606> Rolü verildi", true)
                     menu.clicker.member.roles.add("884123853515800606")
                         menu.clicker.member.roles.remove("884123851930345493") //mor
@@ -458,8 +456,8 @@ client.on("message", async message => {
         function menuselection(menu) {
             switch(menu.values[0]) {
                 case "koç":
-                    menu.reply.send("<@&810934535435976754> Rolü verildi", true)
-                    menu.clicker.member.roles.add("810934535435976754")
+                    menu.reply.send("<@&884123886730502145> Rolü verildi", true)
+                    menu.clicker.member.roles.add("884123886730502145")
                     menu.clicker.member.roles.remove("810842301919920181")
                     menu.clicker.member.roles.remove("810919779460186153")
                     menu.clicker.member.roles.remove("810846156791218177")
