@@ -661,17 +661,37 @@ menu.clicker.member.roles.remove("884123896016695297")
     }
 });
 client.on("message", async message => {
-    if(message.content.startsWith(".burç")) {
+    if(message.content.startsWith(".sdpc")) {
         if(message.author.bot) return;
         let secenek1 = new MessageMenuOption()
         .setLabel("Çekiliş Katılımcısı")
         .setValue("Çekiliş Katılımcısı")
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
-        .setEmoji("") 
+        .setEmoji("🎉") 
         let secenek2 = new MessageMenuOption()
-        .setLabel("Sarı")
-        .setValue("sarı")
+        .setLabel("Partner Görme")
+        .setValue("Partner Görme")
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
-        .setEmoji("🍋")
+        .setEmoji("<:emoji_85:915269762718777424>")
+        MessageMenuOption()
+        .setLabel("temizle")
+        .setValue("temizle")
+        .setDescription("Rolü almak için tıkla!")
+        .setDefault()
+        .setEmoji("885886965495504896")
+        let menu = new MessageMenu()
+        .setID("MENU")
+        .setMaxValues(1)
+        .setMinValues(1)
+        .setPlaceholder("Çekiliş katılımcısı ve Partner Görme rollerini alabilirsiniz!")
+        .addOption(secenek1)
+        .addOption(secenek2)
+        message.channel.send("Çekiliş katılımcısı ve Partner Görme rollerini alabilirsiniz!", menu)
+        function menuselection(menu) {
+            switch(menu.values[0]) {
+                case "partner":
+                    menu.reply.send("<@&884123855164166245> Rolü verildi", true)
+                    menu.clicker.member.roles.add("810934535435976754")
+                    menu.clicker.member.roles.remove("810842301919920181")
