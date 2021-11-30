@@ -425,12 +425,6 @@ client.on("message", async message => {
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
         .setEmoji("♒")
-        let secenek12 = new MessageMenuOption()
-        .setLabel("Balık")
-        .setValue("balık")
-        .setDescription("Rolü almak için tıkla!")
-        .setDefault()
-        .setEmoji("♓")
         let secenek13 = new MessageMenuOption()
         .setLabel("temizle")
         .setValue("temizle")
@@ -453,7 +447,6 @@ client.on("message", async message => {
         .addOption(secenek9)
         .addOption(secenek10)
         .addOption(secenek11)
-        .addOption(secenek12)
         .addOption(secenek13)
         let menumesaj = await message.channel.send("Aşağıdaki menüye tıklayarak Burç Rollerini seçebilirsin!", menu)
         function menuselection(menu) {
@@ -725,31 +718,29 @@ client.on("message", async message => {
     if(message.content.startsWith(".sdhawlii) {
         if(message.author.bot) return;
         let secenek1 = new MessageMenuOption()
-        .setLabel("Ko
-        .setValue("koç")
+        .setLabel("Kocertified illegal people
+        .setValue("kocertified illegal people
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
         .setEmoji("♈") 
         let secenek2 = new MessageMenuOption()
-        .setLabel("Boğa")
-        .setValue("boğa")
+        .setLabel("Bo#ZaafYok
+        .setValue("bo#ZaafYok
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
         .setEmoji("♉")
         let secenek3 = new MessageMenuOption()
-        .setLabel("İkizler")
-        .setValue("ikizler")
+        .setLabel("("#kimseciklerbaşkaşgöz")       .setValue("ik#kimseciklerbaşkaşgöz
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
         .setEmoji("♊")
         let secenek4 = new MessageMenuOption()
-        .setLabel("Yengeç")
-        .setValue("yengeç")
+        .setLabel("Ye#keyfimmeyfim10numara"        .setValue("ye#keyfimmeyfim10numara
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
         .setEmoji("♋")
         let secenek5 = new MessageMenuOption()
-        .setLabel("Aslan")
+        .setLabel("Asşerefsiz insan sevmem !?!
         .setValue("aslan")
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
