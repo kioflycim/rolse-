@@ -111,7 +111,7 @@ client.on("error", e => {
 });
 
 client.on("message", async message => {
-    if(message.content.startsWith("allah")) {
+    if(message.content.startsWith("!menu")) {
         if(message.author.bot) return;
         let secenek1 = new MessageMenuOption()
         .setLabel("Abone Ol")
