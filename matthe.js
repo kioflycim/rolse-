@@ -174,31 +174,31 @@ client.on("message", async message => {
         function menuselection(menu) {
             switch(menu.values[0]) {
                 case "kırmızı":
-                    menu.reply.send("<884123850944688169> Rolü verildi", true)
-                    menu.clicker.member.roles.add("884123850944688169")
+                    menu.reply.send("<@&810934535435976754> Rolü verildi", true)
+                    menu.clicker.member.roles.add("810934535435976754")
                     menu.clicker.member.roles.remove("810842301919920181")
-                    menu.clicker.member.roles.remove("911584013569892392")
-                    menu.clicker.member.roles.remove("911584028426129458")
-                    menu.clicker.member.roles.remove("911584036386906153")
-                    menu.clicker.member.roles.remove("911584760579645471")
+                    menu.clicker.member.roles.remove("810919779460186153")
+                    menu.clicker.member.roles.remove("810846156791218177")
+                    menu.clicker.member.roles.remove("810930370988081192")
+                    menu.clicker.member.roles.remove("810934587307196517")
                 break;
                 case "sarı":
-                    menu.reply.send("<@&810842301919920181> Rolü verildi", true)
-                    menu.clicker.member.roles.add("810842301919920181") 
-                    menu.clicker.member.roles.remove("911583985811988501")
-                    menu.clicker.member.roles.remove("911584013569892392")
-                    menu.clicker.member.roles.remove("911584028426129458")
-                    menu.clicker.member.roles.remove("911584036386906153")
-                    menu.clicker.member.roles.remove("911584760579645471")
+                    menu.reply.send("<@&810934587307196517> Rolü verildi", true)
+                    menu.clicker.member.roles.add("810934587307196517") 
+                    menu.clicker.member.roles.remove("810934535435976754")
+                    menu.clicker.member.roles.remove("810842301919920181")
+                    menu.clicker.member.roles.remove("810919779460186153")
+                    menu.clicker.member.roles.remove("816656564756676628")
+                    menu.clicker.member.roles.remove("810930370988081192")
                 break;
                 case "mor":
-                    menu.reply.send("<@&810846156791218177> Rolü verildi", true)
-                    menu.clicker.member.roles.add("810846156791218177")
-                    menu.clicker.member.roles.remove("911583985811988501")
-                    menu.clicker.member.roles.remove("911584008859705364")
-                    menu.clicker.member.roles.remove("911584028426129458")
-                    menu.clicker.member.roles.remove("911584036386906153")
-                    menu.clicker.member.roles.remove("911584760579645471")
+                    menu.reply.send("<@&810842301919920181> Rolü verildi", true)
+                    menu.clicker.member.roles.add("810842301919920181")
+                    menu.clicker.member.roles.remove("810934535435976754")
+                    menu.clicker.member.roles.remove("810934587307196517")
+                    menu.clicker.member.roles.remove("810919779460186153")
+                    menu.clicker.member.roles.remove("816656564756676628")
+                    menu.clicker.member.roles.remove("810930370988081192")
                 break;
                 case "yeşil":
                     menu.reply.send("<@&810930370988081192> Rolü verildi", true)
