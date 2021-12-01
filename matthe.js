@@ -915,7 +915,7 @@ menu.clicker.member.roles.remove("914992030797676616")
 menu.clicker.member.roles.remove("914994197638053948")
 menu.clicker.member.roles.remove("914994803299725312")
                 break;
-                case "abdülfettah":
+                case "Abdülfettah":
                     menu.reply.send("<@&914994197638053948> Rolü verildi", true)
 menu.clicker.member.roles.add("914994197638053948")
 menu.clicker.member.roles.remove("915023584613773333")
