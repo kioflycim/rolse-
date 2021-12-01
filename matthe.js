@@ -674,7 +674,7 @@ client.on("message", async message => {
         .setValue("cekilis")
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
-        .setEmoji("🎉") 
+        .setEmoji("888444684622499922") 
         let secenek2 = new MessageMenuOption()
         .setLabel("Partner Görme")
         .setValue("partner")
@@ -723,7 +723,7 @@ client.on("message", async message => {
 });
  
 client.on("message", async message => {
-    if(message.content.startsWith(".frenk")) {
+    if(message.content.startsWith(".rol")) {
         if(message.author.bot) return;
         let secenek1 = new MessageMenuOption()
         .setLabel("certified illegal people")
@@ -742,7 +742,7 @@ client.on("message", async message => {
         .setValue("#kimseciklerbaşkaşgöz")
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
-        .setEmoji("")
+        .setEmoji("🍻")
         let secenek4 = new MessageMenuOption()
         .setLabel("#keyfimmeyfim10numara")
         .setValue("#keyfimmeyfim10numara")
@@ -750,8 +750,8 @@ client.on("message", async message => {
         .setDefault()
         .setEmoji("👑")
         let secenek5 = new MessageMenuOption()
-        .setLabel("şerefsiz insan sevmem !?!")
-        .setValue("şerefsiz insan sevmem !?!")
+        .setLabel("şerefsiz insan sevmem!?!")
+        .setValue("şerefsiz insan sevmem!?!")
         .setDescription("Rolü almak için tıkla!")
         .setDefault()
         .setEmoji("🐵")
