@@ -443,7 +443,7 @@ client.on("message", async message => {
       .setID("MENU")
       .setMaxValues(1)
       .setMinValues(1)
-      .setPlaceholder("Renk Rollerini Seçebilirsiniz")
+      .setPlaceholder("Burç Rollerini Seçebilirsiniz")
       .addOption(secenek1)
       .addOption(secenek2)
       .addOption(secenek3)
@@ -984,7 +984,7 @@ client.on("message", async message => {
       .setValue("kalbime iyi davranın")
       .setDescription("Rolü almak için tıkla!")
       .setDefault()
-      .setEmoji("♥️");
+      .setEmoji("867164174220132362");
     let secenek2 = new MessageMenuOption()
       .setLabel("aşk acısı çekiyorum")
       .setValue("aşk acısı çekiyorum")
