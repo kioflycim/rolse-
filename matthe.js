@@ -1102,7 +1102,7 @@ client.on("message", async message => {
     );
     function menuselection(menu) {
       switch (menu.values[0]) {
-        case "kalbime iyi davranın)":
+        case "kalbime iyi davranın":
           menu.reply.send("<@&914994920299847720> Rolü verildi", true);
           menu.clicker.member.roles.add("914994920299847720");
           menu.clicker.member.roles.remove("914995151070429234");
@@ -1120,7 +1120,7 @@ client.on("message", async message => {
           menu.clicker.member.roles.remove("915397256386076724");
           menu.clicker.member.roles.remove("915397289042915379");
           break;
-        case "aşk acısı çekiyorum ":
+        case "aşk acısı çekiyorum":
           menu.reply.send("<@&914995151070429234> Rolü verildi", true);
           menu.clicker.member.roles.add("914995151070429234");
           menu.clicker.member.roles.remove("914994920299847720");
