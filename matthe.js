@@ -1210,7 +1210,7 @@ client.on("message", async message => {
           menu.clicker.member.roles.remove("915397256386076724");
           menu.clicker.member.roles.remove("915397289042915379");
           break;
-        case "Çalıştıkça parlar, Ekibim altın demir.,":
+        case "Çalıştıkça parlar, Ekibim altın demir.":
           menu.reply.send("<@&892700069000790046> Rolü verildi", true);
           menu.clicker.member.roles.add("892700069000790046");
           menu.clicker.member.roles.remove("914994920299847720");
