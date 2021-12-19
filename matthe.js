@@ -457,7 +457,7 @@ client.on("message", async message => {
 
           menu.clicker.member.roles.remove("920405830627655730");
 
-          menu.clicker.member.roles.remove("920405831831400448");
+          menu.clicker.member.roles.remove("922217135957246013");
 
           menu.clicker.member.roles.remove("920405832775139350");
 
@@ -482,7 +482,7 @@ client.on("message", async message => {
 
           menu.clicker.member.roles.remove("920405830627655730");
 
-          menu.clicker.member.roles.remove("920405831831400448");
+          menu.clicker.member.roles.remove("922217135957246013");
 
           menu.clicker.member.roles.remove("920405832775139350");
 
@@ -507,7 +507,7 @@ client.on("message", async message => {
 
           menu.clicker.member.roles.remove("920405830627655730");
 
-          menu.clicker.member.roles.remove("920405831831400448");
+          menu.clicker.member.roles.remove("922217135957246013");
 
           menu.clicker.member.roles.remove("920405832775139350");
 
@@ -532,7 +532,7 @@ client.on("message", async message => {
 
           menu.clicker.member.roles.remove("920405830627655730");
 
-          menu.clicker.member.roles.remove("920405831831400448");
+          menu.clicker.member.roles.remove("922217135957246013");
 
           menu.clicker.member.roles.remove("920405832775139350");
 
@@ -557,7 +557,7 @@ client.on("message", async message => {
 
           menu.clicker.member.roles.remove("920405829864280184");
 
-          menu.clicker.member.roles.remove("920405831831400448");
+          menu.clicker.member.roles.remove("922217135957246013");
 
           menu.clicker.member.roles.remove("920405832775139350");
 
@@ -566,9 +566,9 @@ client.on("message", async message => {
           break;
 
         case "mezemdi rakıma":
-          menu.reply.send("<@&920405831831400448> Rolü verildi", true);
+          menu.reply.send("<@&922217135957246013> Rolü verildi", true);
 
-          menu.clicker.member.roles.add("920405831831400448");
+          menu.clicker.member.roles.add("922217135957246013");
 
           menu.clicker.member.roles.remove("920405825665765376");
 
