@@ -407,7 +407,7 @@ client.on("message", async message => {
 
           menu.clicker.member.roles.remove("920405830627655730");
 
-          menu.clicker.member.roles.remove("920405831831400448");
+          menu.clicker.member.roles.remove("922217135957246013");
 
           menu.clicker.member.roles.remove("920405832775139350");
 
@@ -432,7 +432,7 @@ client.on("message", async message => {
 
           menu.clicker.member.roles.remove("920405830627655730");
 
-          menu.clicker.member.roles.remove("920405831831400448");
+          menu.clicker.member.roles.remove("922217135957246013");
 
           menu.clicker.member.roles.remove("920405832775139350");
 
@@ -609,7 +609,7 @@ client.on("message", async message => {
 
           menu.clicker.member.roles.remove("920405830627655730");
 
-          menu.clicker.member.roles.remove("920405831831400448");
+          menu.clicker.member.roles.remove("922217135957246013");
 
           menu.clicker.member.roles.remove("920405833593016320");
 
@@ -634,7 +634,7 @@ client.on("message", async message => {
 
           menu.clicker.member.roles.remove("920405830627655730");
 
-          menu.clicker.member.roles.remove("920405831831400448");
+          menu.clicker.member.roles.remove("922217135957246013");
 
           menu.clicker.member.roles.remove("920405832775139350");
 
@@ -657,7 +657,7 @@ client.on("message", async message => {
 
           menu.clicker.member.roles.remove("920405830627655730");
 
-          menu.clicker.member.roles.remove("920405831831400448");
+          menu.clicker.member.roles.remove("922217135957246013");
 
           menu.clicker.member.roles.remove("920405832775139350");
 
