@@ -301,11 +301,11 @@ client.on("message", async message => {
           menu.clicker.member.roles.remove("926508027568345141"); //siyah
           break;
         case "Sarı":
-          menu.reply.send("<@&926508020689670225> Rolü verildi", true);
-          menu.clicker.member.roles.add("926508020689670225");
+          menu.reply.send("<@&926508021637595156> Rolü verildi", true);
+          menu.clicker.member.roles.add("926508021637595156");
 
           menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
-          menu.clicker.member.roles.remove("926508021637595156"); //sarı
+          menu.clicker.member.roles.remove("926508020689670225"); //sarı
           menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
           menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
           menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
@@ -579,7 +579,7 @@ client.on("message", async message => {
           menu.clicker.member.roles.remove("926508037286527046");
           menu.clicker.member.roles.remove("926508037768896584");
           break;
-        case "şerefsiz insan sevmem !?!":
+        case "şerefsiz insan sevmem!?!":
           menu.reply.send("<@&926508034094678086> Rolü verildi", true);
           menu.clicker.member.roles.add("926508034094678086");
 
