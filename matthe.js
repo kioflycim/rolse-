@@ -434,7 +434,7 @@ client.on("message", async message => {
   }
 });
 client.on("message", async message => {
-  if (message.content.startsWith(".sddddrol1")) {
+  if (message.content.startsWith(".kfrol1")) {
     if (message.author.bot) return;
     let secenek1 = new MessageMenuOption()
       .setLabel("certified illegal people")
@@ -686,7 +686,7 @@ client.on("message", async message => {
   }
 });
 client.on("message", async message => {
-  if (message.content.startsWith(".rolllll")) {
+  if (message.content.startsWith(".kfrol2")) {
     if (message.author.bot) return;
     let secenek1 = new MessageMenuOption()
       .setLabel("kalbime iyi davranın")
