@@ -434,7 +434,7 @@ client.on("message", async message => {
   }
 });
 client.on("message", async message => {
-  if (message.content.startsWith(".kfrol1")) {
+  if (message.content.startsWith(".kfrol")) {
     if (message.author.bot) return;
     let secenek1 = new MessageMenuOption()
       .setLabel("certified illegal people")
