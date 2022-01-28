@@ -124,7 +124,7 @@ app.listen(port, () =>
 /////////Çekiliş Partner
 
 client.on("message", async message => {
-  if (message.content.startsWith(".kfpc")) {
+  if (message.content.startsWith(".kf")) {
     if (message.author.bot) return;
     let secenek1 = new MessageMenuOption()
       .setLabel("Çekiliş Katılımcısı")
@@ -181,260 +181,9 @@ client.on("message", async message => {
     });
   }
 });
-//////////////////////////////// RENKLER ////////////////////////////////
+
 client.on("message", async message => {
-  if (message.content.startsWith(".kfrenk")) {
-    if (message.author.bot) return;
-    let secenek1 = new MessageMenuOption()
-      .setLabel("Kırmızı")
-      .setValue("kırmızı")
-      .setDescription("Rolü almak için tıkla!")
-      .setDefault()
-      .setEmoji("🍒");
-    let secenek2 = new MessageMenuOption()
-      .setLabel("Mor")
-      .setValue("Mor")
-      .setDescription("Rolü almak için tıkla!")
-      .setDefault()
-      .setEmoji("🍇");
-    let secenek3 = new MessageMenuOption()
-      .setLabel("Sarı")
-      .setValue("Sarı")
-      .setDescription("Rolü almak için tıkla!")
-      .setDefault()
-      .setEmoji("🍋");
-    let secenek4 = new MessageMenuOption()
-      .setLabel("Açık Pembe")
-      .setValue("Açık Pembe")
-      .setDescription("Rolü almak için tıkla!")
-      .setDefault()
-      .setEmoji("🌸");
-    let secenek5 = new MessageMenuOption()
-      .setLabel("Koyu Pembe")
-      .setValue("Koyu Pembe")
-      .setDescription("Rolü almak için tıkla!")
-      .setDefault()
-      .setEmoji("🌷");
-    let secenek6 = new MessageMenuOption()
-      .setLabel("Mavi")
-      .setValue("mavi")
-      .setDescription("Rolü almak için tıkla!")
-      .setDefault()
-      .setEmoji("🧊");
-    let secenek7 = new MessageMenuOption()
-      .setLabel("Açık Mavi")
-      .setValue("Açık Mavi")
-      .setDescription("Rolü almak için tıkla!")
-      .setDefault()
-      .setEmoji("🎐");
-    let secenek8 = new MessageMenuOption()
-      .setLabel("Yeşil")
-      .setValue("yeşil")
-      .setDescription("Rolü almak için tıkla!")
-      .setDefault()
-      .setEmoji("🍏");
-    let secenek9 = new MessageMenuOption()
-      .setLabel("Su yeşili")
-      .setValue("su yeşili")
-      .setDescription("Rolü almak için tıkla!")
-      .setDefault()
-      .setEmoji("🍈");
-    let secenek10 = new MessageMenuOption()
-      .setLabel("Siyah")
-      .setValue("siyah")
-      .setDescription("Rolü almak için tıkla!")
-      .setDefault()
-      .setEmoji("🖤");
-    let secenek11 = new MessageMenuOption()
-      .setLabel("temizle")
-      .setValue("temizle")
-      .setDescription("Rolü almak için tıkla!")
-      .setDefault()
-      .setEmoji("🗑️");
-    let menu = new MessageMenu()
-      .setID("MENU")
-      .setMaxValues(1)
-      .setMinValues(1)
-      .setPlaceholder("Renk Rollerini Seçebilirsiniz")
-      .addOption(secenek1)
-      .addOption(secenek2)
-      .addOption(secenek3)
-      .addOption(secenek4)
-      .addOption(secenek5)
-      .addOption(secenek6)
-      .addOption(secenek7)
-      .addOption(secenek8)
-      .addOption(secenek9)
-      .addOption(secenek10)
-      .addOption(secenek11);
-    let menumesaj = await message.channel.send(
-      "Aşağıdaki menüye tıklayarak Renk Rollerini seçebilirsin!",
-      menu
-    );
-    function menuselection(menu) {
-      switch (menu.values[0]) {
-        case "kırmızı":
-          menu.reply.send("<@&926508019951485019> Rolü verildi", true);
-          menu.clicker.member.roles.add("926508019951485019"); //kırmızı
-          menu.clicker.member.roles.remove("926508020689670225"); //mor
-          menu.clicker.member.roles.remove("926508021637595156"); //sarı
-          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
-          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
-          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
-          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
-          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
-          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
-          menu.clicker.member.roles.remove("926508027568345141"); //siyah
-          break;
-        case "Mor":
-          menu.reply.send("<@&926508020689670225> Rolü verildi", true);
-          menu.clicker.member.roles.add("926508020689670225"); //mor
-
-          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
-          menu.clicker.member.roles.remove("926508021637595156"); //sarı
-          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
-          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
-          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
-          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
-          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
-          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
-          menu.clicker.member.roles.remove("926508027568345141"); //siyah
-          break;
-        case "Sarı":
-          menu.reply.send("<@&926508021637595156> Rolü verildi", true);
-          menu.clicker.member.roles.add("926508021637595156");
-
-          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
-          menu.clicker.member.roles.remove("926508020689670225"); //sarı
-          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
-          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
-          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
-          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
-          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
-          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
-          menu.clicker.member.roles.remove("926508027568345141"); //siyah
-          break;
-        case "Açık Pembe":
-          menu.reply.send("<@&926508022396772392> Rolü verildi", true);
-          menu.clicker.member.roles.add("926508022396772392");
-
-          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
-          menu.clicker.member.roles.remove("926508020689670225"); //mor
-          menu.clicker.member.roles.remove("926508021637595156"); //sarı
-          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
-          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
-          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
-          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
-          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
-          menu.clicker.member.roles.remove("926508027568345141"); //siyah
-          break;
-        case "Koyu Pembe":
-          menu.reply.send("<@&926508023210475520> Rolü verildi", true);
-          menu.clicker.member.roles.add("926508023210475520");
-
-          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
-          menu.clicker.member.roles.remove("926508020689670225"); //mor
-          menu.clicker.member.roles.remove("926508021637595156"); //sarı
-          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
-          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
-          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
-          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
-          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
-          menu.clicker.member.roles.remove("926508027568345141"); //siyah
-          break;
-        case "mavi":
-          menu.reply.send("<@&926508024024141824> Rolü verildi", true);
-          menu.clicker.member.roles.add("926508024024141824");
-
-          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
-          menu.clicker.member.roles.remove("926508020689670225"); //mor
-          menu.clicker.member.roles.remove("926508021637595156"); //sarı
-          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
-          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
-          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
-          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
-          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
-          menu.clicker.member.roles.remove("926508027568345141"); //siyah
-          break;
-        case "Açık Mavi":
-          menu.reply.send("<@&926508024846250004> Rolü verildi", true);
-          menu.clicker.member.roles.add("926508024846250004");
-
-          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
-          menu.clicker.member.roles.remove("926508020689670225"); //mor
-          menu.clicker.member.roles.remove("926508021637595156"); //sarı
-          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
-          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
-          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
-          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
-          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
-          menu.clicker.member.roles.remove("926508027568345141"); //siyah
-          break;
-        case "yeşil":
-          menu.reply.send("<@&926508025735434251> Rolü verildi", true);
-          menu.clicker.member.roles.add("926508025735434251");
-
-          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
-          menu.clicker.member.roles.remove("926508020689670225"); //mor
-          menu.clicker.member.roles.remove("926508021637595156"); //sarı
-          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
-          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
-          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
-          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
-          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
-          menu.clicker.member.roles.remove("926508027568345141"); //siyah
-          break;
-        case "su yeşili":
-          menu.reply.send("<@&926508026767233084> Rolü verildi", true);
-          menu.clicker.member.roles.add("926508026767233084");
-
-          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
-          menu.clicker.member.roles.remove("926508020689670225"); //mor
-          menu.clicker.member.roles.remove("926508021637595156"); //sarı
-          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
-          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
-          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
-          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
-          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
-          menu.clicker.member.roles.remove("926508027568345141"); //siyah
-          break;
-        case "siyah":
-          menu.reply.send("<@&926508027568345141> Rolü verildi", true);
-          menu.clicker.member.roles.add("926508027568345141");
-
-          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
-          menu.clicker.member.roles.remove("926508020689670225"); //mor
-          menu.clicker.member.roles.remove("926508021637595156"); //sarı
-          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
-          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
-          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
-          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
-          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
-          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
-          break;
-        case "temizle":
-          menu.reply.send("Renk Rolü alındı", true);
-          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
-          menu.clicker.member.roles.remove("926508020689670225"); //mor
-          menu.clicker.member.roles.remove("926508021637595156"); //sarı
-          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
-          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
-          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
-          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
-          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
-          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
-          menu.clicker.member.roles.remove("926508027568345141"); //siyah
-      }
-    }
-    client.on("clickMenu", menu => {
-      if (menu.message.id == menumesaj.id) {
-        menuselection(menu);
-      }
-    });
-  }
-});
-client.on("message", async message => {
-  if (message.content.startsWith(".kfrol1")) {
+  if (message.content.startsWith(".kf")) {
     if (message.author.bot) return;
     let secenek1 = new MessageMenuOption()
       .setLabel("certified illegal people")
@@ -686,7 +435,7 @@ client.on("message", async message => {
   }
 });
 client.on("message", async message => {
-  if (message.content.startsWith(".kfrol2")) {
+  if (message.content.startsWith(".kf")) {
     if (message.author.bot) return;
     let secenek1 = new MessageMenuOption()
       .setLabel("kalbime iyi davranın")
@@ -1106,6 +855,258 @@ client.on("message", async message => {
           menu.clicker.member.roles.remove("926508054474797158");
 
           break;
+      }
+    }
+    client.on("clickMenu", menu => {
+      if (menu.message.id == menumesaj.id) {
+        menuselection(menu);
+      }
+    });
+  }
+});
+//////////////////////////////// RENKLER ////////////////////////////////
+client.on("message", async message => {
+  if (message.content.startsWith(".kf")) {
+    if (message.author.bot) return;
+    let secenek1 = new MessageMenuOption()
+      .setLabel("Kırmızı")
+      .setValue("kırmızı")
+      .setDescription("Rolü almak için tıkla!")
+      .setDefault()
+      .setEmoji("🍒");
+    let secenek2 = new MessageMenuOption()
+      .setLabel("Mor")
+      .setValue("Mor")
+      .setDescription("Rolü almak için tıkla!")
+      .setDefault()
+      .setEmoji("🍇");
+    let secenek3 = new MessageMenuOption()
+      .setLabel("Sarı")
+      .setValue("Sarı")
+      .setDescription("Rolü almak için tıkla!")
+      .setDefault()
+      .setEmoji("🍋");
+    let secenek4 = new MessageMenuOption()
+      .setLabel("Açık Pembe")
+      .setValue("Açık Pembe")
+      .setDescription("Rolü almak için tıkla!")
+      .setDefault()
+      .setEmoji("🌸");
+    let secenek5 = new MessageMenuOption()
+      .setLabel("Koyu Pembe")
+      .setValue("Koyu Pembe")
+      .setDescription("Rolü almak için tıkla!")
+      .setDefault()
+      .setEmoji("🌷");
+    let secenek6 = new MessageMenuOption()
+      .setLabel("Mavi")
+      .setValue("mavi")
+      .setDescription("Rolü almak için tıkla!")
+      .setDefault()
+      .setEmoji("🧊");
+    let secenek7 = new MessageMenuOption()
+      .setLabel("Açık Mavi")
+      .setValue("Açık Mavi")
+      .setDescription("Rolü almak için tıkla!")
+      .setDefault()
+      .setEmoji("🎐");
+    let secenek8 = new MessageMenuOption()
+      .setLabel("Yeşil")
+      .setValue("yeşil")
+      .setDescription("Rolü almak için tıkla!")
+      .setDefault()
+      .setEmoji("🍏");
+    let secenek9 = new MessageMenuOption()
+      .setLabel("Su yeşili")
+      .setValue("su yeşili")
+      .setDescription("Rolü almak için tıkla!")
+      .setDefault()
+      .setEmoji("🍈");
+    let secenek10 = new MessageMenuOption()
+      .setLabel("Siyah")
+      .setValue("siyah")
+      .setDescription("Rolü almak için tıkla!")
+      .setDefault()
+      .setEmoji("🖤");
+    let secenek11 = new MessageMenuOption()
+      .setLabel("temizle")
+      .setValue("temizle")
+      .setDescription("Rolü almak için tıkla!")
+      .setDefault()
+      .setEmoji("🗑️");
+    let menu = new MessageMenu()
+      .setID("MENU")
+      .setMaxValues(1)
+      .setMinValues(1)
+      .setPlaceholder("Renk Rollerini Seçebilirsiniz")
+      .addOption(secenek1)
+      .addOption(secenek2)
+      .addOption(secenek3)
+      .addOption(secenek4)
+      .addOption(secenek5)
+      .addOption(secenek6)
+      .addOption(secenek7)
+      .addOption(secenek8)
+      .addOption(secenek9)
+      .addOption(secenek10)
+      .addOption(secenek11);
+    let menumesaj = await message.channel.send(
+      "Aşağıdaki menüye tıklayarak Renk Rollerini seçebilirsin!",
+      menu
+    );
+    function menuselection(menu) {
+      switch (menu.values[0]) {
+        case "kırmızı":
+          menu.reply.send("<@&926508019951485019> Rolü verildi", true);
+          menu.clicker.member.roles.add("926508019951485019"); //kırmızı
+          menu.clicker.member.roles.remove("926508020689670225"); //mor
+          menu.clicker.member.roles.remove("926508021637595156"); //sarı
+          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
+          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
+          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
+          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
+          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
+          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
+          menu.clicker.member.roles.remove("926508027568345141"); //siyah
+          break;
+        case "Mor":
+          menu.reply.send("<@&926508020689670225> Rolü verildi", true);
+          menu.clicker.member.roles.add("926508020689670225"); //mor
+
+          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
+          menu.clicker.member.roles.remove("926508021637595156"); //sarı
+          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
+          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
+          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
+          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
+          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
+          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
+          menu.clicker.member.roles.remove("926508027568345141"); //siyah
+          break;
+        case "Sarı":
+          menu.reply.send("<@&926508021637595156> Rolü verildi", true);
+          menu.clicker.member.roles.add("926508021637595156");
+
+          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
+          menu.clicker.member.roles.remove("926508020689670225"); //sarı
+          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
+          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
+          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
+          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
+          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
+          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
+          menu.clicker.member.roles.remove("926508027568345141"); //siyah
+          break;
+        case "Açık Pembe":
+          menu.reply.send("<@&926508022396772392> Rolü verildi", true);
+          menu.clicker.member.roles.add("926508022396772392");
+
+          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
+          menu.clicker.member.roles.remove("926508020689670225"); //mor
+          menu.clicker.member.roles.remove("926508021637595156"); //sarı
+          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
+          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
+          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
+          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
+          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
+          menu.clicker.member.roles.remove("926508027568345141"); //siyah
+          break;
+        case "Koyu Pembe":
+          menu.reply.send("<@&926508023210475520> Rolü verildi", true);
+          menu.clicker.member.roles.add("926508023210475520");
+
+          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
+          menu.clicker.member.roles.remove("926508020689670225"); //mor
+          menu.clicker.member.roles.remove("926508021637595156"); //sarı
+          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
+          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
+          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
+          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
+          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
+          menu.clicker.member.roles.remove("926508027568345141"); //siyah
+          break;
+        case "mavi":
+          menu.reply.send("<@&926508024024141824> Rolü verildi", true);
+          menu.clicker.member.roles.add("926508024024141824");
+
+          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
+          menu.clicker.member.roles.remove("926508020689670225"); //mor
+          menu.clicker.member.roles.remove("926508021637595156"); //sarı
+          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
+          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
+          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
+          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
+          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
+          menu.clicker.member.roles.remove("926508027568345141"); //siyah
+          break;
+        case "Açık Mavi":
+          menu.reply.send("<@&926508024846250004> Rolü verildi", true);
+          menu.clicker.member.roles.add("926508024846250004");
+
+          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
+          menu.clicker.member.roles.remove("926508020689670225"); //mor
+          menu.clicker.member.roles.remove("926508021637595156"); //sarı
+          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
+          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
+          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
+          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
+          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
+          menu.clicker.member.roles.remove("926508027568345141"); //siyah
+          break;
+        case "yeşil":
+          menu.reply.send("<@&926508025735434251> Rolü verildi", true);
+          menu.clicker.member.roles.add("926508025735434251");
+
+          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
+          menu.clicker.member.roles.remove("926508020689670225"); //mor
+          menu.clicker.member.roles.remove("926508021637595156"); //sarı
+          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
+          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
+          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
+          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
+          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
+          menu.clicker.member.roles.remove("926508027568345141"); //siyah
+          break;
+        case "su yeşili":
+          menu.reply.send("<@&926508026767233084> Rolü verildi", true);
+          menu.clicker.member.roles.add("926508026767233084");
+
+          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
+          menu.clicker.member.roles.remove("926508020689670225"); //mor
+          menu.clicker.member.roles.remove("926508021637595156"); //sarı
+          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
+          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
+          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
+          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
+          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
+          menu.clicker.member.roles.remove("926508027568345141"); //siyah
+          break;
+        case "siyah":
+          menu.reply.send("<@&926508027568345141> Rolü verildi", true);
+          menu.clicker.member.roles.add("926508027568345141");
+
+          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
+          menu.clicker.member.roles.remove("926508020689670225"); //mor
+          menu.clicker.member.roles.remove("926508021637595156"); //sarı
+          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
+          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
+          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
+          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
+          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
+          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
+          break;
+        case "temizle":
+          menu.reply.send("Renk Rolü alındı", true);
+          menu.clicker.member.roles.remove("926508019951485019"); //kırmızı
+          menu.clicker.member.roles.remove("926508020689670225"); //mor
+          menu.clicker.member.roles.remove("926508021637595156"); //sarı
+          menu.clicker.member.roles.remove("926508022396772392"); // açık Pembe
+          menu.clicker.member.roles.remove("926508023210475520"); //koyu Pembe
+          menu.clicker.member.roles.remove("926508024024141824"); //koyu mavi
+          menu.clicker.member.roles.remove("926508024846250004"); //açık mavi
+          menu.clicker.member.roles.remove("926508025735434251"); // yeşili
+          menu.clicker.member.roles.remove("926508026767233084"); //su yeşili
+          menu.clicker.member.roles.remove("926508027568345141"); //siyah
       }
     }
     client.on("clickMenu", menu => {
